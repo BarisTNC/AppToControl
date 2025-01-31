@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uzaktan Yönetim Sistemi</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Önceki stiller aynen kalacak, sadece login form stilleri ekleniyor */
+        .login-container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .form-group label {
+            font-weight: 500;
+        }
+
+        .form-group input {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Login/Register Form -->
+    <div id="authContainer" class="login-container">
+        <h2>Uzaktan Yönetim Sistemi</h2>
+        <div class="login-form">
+            <div class="form-group">
+                <label for="username">Kullanıcı Adı:</label>
+                <input type="text" id="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Şifre:</label>
+                <input type="password" id="password" required>
+            </div>
+            <div class="auth-buttons">
+                <button onclick="login()" class="btn-primary">Giriş Yap</button>
+                <button onclick="register()" class="btn-secondary">Kayıt Ol</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content (initially hidden) -->
+    <div id="mainContent" class="hidden">
+        <!-- Önceki içerik aynen kalacak -->
+    </div>
+
+    <script>
+        let API_KEY = localStorage.getItem('api_key');
+        let socket = null;
+
+        // Sayfa yüklendiğinde kontrol et
+        window.onload = () => {
+            if (API_KEY) {
+                initializeApp();
+            } else {
+                document.getElementById('authContainer').classList.remove('hidden');
+            }
+        };
+
+        async function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            try {
+                const response = await fetch('/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ username, password })
+                });
+
+                const data = await response.json();
+                if (data.status === 'success') {
+                    API_KEY = data.api_key;
+                    localStorage.setItem('api_key', API_KEY);
+                    initializeApp();
+                } else {
+                    showToast(data.message, 'error');
+                }
+            } catch (error) {
+                showToast('Giriş yapılırken hata oluştu', 'error');
+            }
+        }
+
+        async function register() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            try {
+                const response = await fetch('/register', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ username, password })
+                });
+
+                const data = await response.json();
+                if (data.status === 'success') {
+                    showToast('Kayıt başarılı, giriş yapabilirsiniz', 'success');
+                } else {
+                    showToast(data.message, 'error');
+                }
+            } catch (error) {
+                showToast('Kayıt olunurken hata oluştu', 'error');
+            }
+        }
+
+        function initializeApp() {
+            document.getElementById('authContainer').classList.add('hidden');
+            document.getElementById('mainContent').classList.remove('hidden');
+            socket = io.connect("http://127.0.0.1:5000");
+            fetchClients();
+        }
+
+        function logout() {
+            localStorage.removeItem('api_key');
+            API_KEY = null;
+            if (socket) {
+                socket.disconnect();
+            }
+            document.getElementById('mainContent').classList.add('hidden');
+            document.getElementById('authContainer').classList.remove('hidden');
+        }
+
+        // Diğer fonksiyonlar aynen kalacak
+    </script>
+</body>
+</html>

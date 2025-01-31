@@ -1,0 +1,544 @@
+2025-01-29 23:10:11,159 - INFO - [werkzeug] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-29 23:10:11,159 - INFO - [werkzeug] [33mPress CTRL+C to quit[0m
+2025-01-29 23:10:16,253 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:10:16] "GET / HTTP/1.1" 200 -
+2025-01-29 23:10:16,294 - INFO - [engineio.server] ioidhlYANyAdgnsBAAAA: Sending packet OPEN data {'sid': 'ioidhlYANyAdgnsBAAAA', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000, 'maxPayload': 1000000}
+2025-01-29 23:10:16,295 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:10:16] "GET /socket.io/?EIO=4&transport=polling&t=PIphvLZ HTTP/1.1" 200 -
+2025-01-29 23:10:16,297 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:10:16,298 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:10:16] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:10:16,322 - INFO - [engineio.server] ioidhlYANyAdgnsBAAAA: Received packet MESSAGE data 0
+2025-01-29 23:10:16,324 - INFO - [server] Client connected: zs5s6zW7KBAw6-tCAAAB from IP: 127.0.0.1
+2025-01-29 23:10:16,323 - INFO - [engineio.server] ioidhlYANyAdgnsBAAAA: Received request to upgrade to websocket
+2025-01-29 23:10:16,325 - INFO - [socketio.server] emitting event "connected" to zs5s6zW7KBAw6-tCAAAB [/]
+2025-01-29 23:10:16,327 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:10:16] "GET /socket.io/?EIO=4&transport=polling&t=PIphvLv&sid=ioidhlYANyAdgnsBAAAA HTTP/1.1" 200 -
+2025-01-29 23:10:16,327 - INFO - [engineio.server] ioidhlYANyAdgnsBAAAA: Sending packet MESSAGE data 2["connected",{"message":"Connected to server!","client_id":"zs5s6zW7KBAw6-tCAAAB","available_commands":{"shutdown":"Sistemi kapat\u0131r","restart":"Sistemi yeniden ba\u015flat\u0131r","sleep":"Uyku moduna al\u0131r","volumeup":"Ses seviyesini art\u0131r\u0131r","volumedown":"Ses seviyesini azalt\u0131r","mute":"Sesi kapat\u0131r"}}]
+2025-01-29 23:10:16,328 - INFO - [engineio.server] ioidhlYANyAdgnsBAAAA: Sending packet MESSAGE data 0{"sid":"zs5s6zW7KBAw6-tCAAAB"}
+2025-01-29 23:10:16,332 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:10:16] "POST /socket.io/?EIO=4&transport=polling&t=PIphvLt&sid=ioidhlYANyAdgnsBAAAA HTTP/1.1" 200 -
+2025-01-29 23:10:16,335 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:10:16] "GET /socket.io/?EIO=4&transport=polling&t=PIphvMC&sid=ioidhlYANyAdgnsBAAAA HTTP/1.1" 200 -
+2025-01-29 23:10:16,339 - INFO - [engineio.server] ioidhlYANyAdgnsBAAAA: Upgrade to websocket successful
+2025-01-29 23:10:18,088 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:10:18,089 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:10:18] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:10:18,568 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:10:18,569 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:10:18] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:10:31,196 - INFO - [engineio.server] nAjAty4_Y-bvLmwTAAAC: Sending packet OPEN data {'sid': 'nAjAty4_Y-bvLmwTAAAC', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000, 'maxPayload': 1000000}
+2025-01-29 23:10:31,197 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:10:31] "GET /socket.io/?transport=polling&EIO=4&t=1738181431.1670299 HTTP/1.1" 200 -
+2025-01-29 23:10:31,201 - INFO - [engineio.server] nAjAty4_Y-bvLmwTAAAC: Received request to upgrade to websocket
+2025-01-29 23:10:31,205 - INFO - [engineio.server] nAjAty4_Y-bvLmwTAAAC: Upgrade to websocket successful
+2025-01-29 23:10:31,207 - INFO - [engineio.server] nAjAty4_Y-bvLmwTAAAC: Received packet MESSAGE data 0{}
+2025-01-29 23:10:31,208 - INFO - [server] Client connected: RUIuoELFpKYoNGevAAAD from IP: 127.0.0.1
+2025-01-29 23:10:31,208 - INFO - [socketio.server] emitting event "connected" to RUIuoELFpKYoNGevAAAD [/]
+2025-01-29 23:10:31,209 - INFO - [engineio.server] nAjAty4_Y-bvLmwTAAAC: Sending packet MESSAGE data 2["connected",{"message":"Connected to server!","client_id":"RUIuoELFpKYoNGevAAAD","available_commands":{"shutdown":"Sistemi kapat\u0131r","restart":"Sistemi yeniden ba\u015flat\u0131r","sleep":"Uyku moduna al\u0131r","volumeup":"Ses seviyesini art\u0131r\u0131r","volumedown":"Ses seviyesini azalt\u0131r","mute":"Sesi kapat\u0131r"}}]
+2025-01-29 23:10:31,209 - INFO - [engineio.server] nAjAty4_Y-bvLmwTAAAC: Sending packet MESSAGE data 0{"sid":"RUIuoELFpKYoNGevAAAD"}
+2025-01-29 23:10:34,290 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:10:34,291 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:10:34] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:10:34,858 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:10:34,859 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:10:34] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:10:35,259 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:10:35,259 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:10:35] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:10:35,786 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:10:35,786 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:10:35] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:10:41,295 - INFO - [engineio.server] ioidhlYANyAdgnsBAAAA: Sending packet PING data None
+2025-01-29 23:10:41,295 - INFO - [engineio.server] ioidhlYANyAdgnsBAAAA: Received packet PONG data 
+2025-01-29 23:10:56,197 - INFO - [engineio.server] nAjAty4_Y-bvLmwTAAAC: Sending packet PING data None
+2025-01-29 23:10:56,198 - INFO - [engineio.server] nAjAty4_Y-bvLmwTAAAC: Received packet PONG data 
+2025-01-29 23:10:58,997 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:10:58,997 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:10:58] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:10:59,285 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:10:59,286 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:10:59] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:10:59,478 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:10:59,478 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:10:59] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:10:59,645 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:10:59,645 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:10:59] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:13:10,052 - INFO - [werkzeug] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-29 23:13:10,053 - INFO - [werkzeug] [33mPress CTRL+C to quit[0m
+2025-01-29 23:13:14,762 - INFO - [engineio.server] grgZZJPhRELnLbKqAAAA: Sending packet OPEN data {'sid': 'grgZZJPhRELnLbKqAAAA', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000, 'maxPayload': 1000000}
+2025-01-29 23:13:14,762 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:13:14] "GET /socket.io/?transport=polling&EIO=4&t=1738181594.745771 HTTP/1.1" 200 -
+2025-01-29 23:13:14,767 - INFO - [engineio.server] grgZZJPhRELnLbKqAAAA: Received request to upgrade to websocket
+2025-01-29 23:13:14,771 - INFO - [engineio.server] grgZZJPhRELnLbKqAAAA: Upgrade to websocket successful
+2025-01-29 23:13:14,772 - INFO - [engineio.server] grgZZJPhRELnLbKqAAAA: Received packet MESSAGE data 0{}
+2025-01-29 23:13:14,773 - INFO - [server] Client connected: KNuU6eV-qb0GZyrsAAAB from IP: 127.0.0.1
+2025-01-29 23:13:14,774 - INFO - [socketio.server] emitting event "connected" to KNuU6eV-qb0GZyrsAAAB [/]
+2025-01-29 23:13:14,774 - INFO - [engineio.server] grgZZJPhRELnLbKqAAAA: Sending packet MESSAGE data 2["connected",{"message":"Connected to server!","client_id":"KNuU6eV-qb0GZyrsAAAB","available_commands":{"shutdown":"Sistemi kapat\u0131r","restart":"Sistemi yeniden ba\u015flat\u0131r","sleep":"Uyku moduna al\u0131r","volumeup":"Ses seviyesini art\u0131r\u0131r","volumedown":"Ses seviyesini azalt\u0131r","mute":"Sesi kapat\u0131r"}}]
+2025-01-29 23:13:14,777 - INFO - [engineio.server] grgZZJPhRELnLbKqAAAA: Sending packet MESSAGE data 0{"sid":"KNuU6eV-qb0GZyrsAAAB"}
+2025-01-29 23:13:15,214 - INFO - [engineio.server] 8KVw00l7CWm1UyLeAAAC: Sending packet OPEN data {'sid': '8KVw00l7CWm1UyLeAAAC', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000, 'maxPayload': 1000000}
+2025-01-29 23:13:15,215 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:13:15] "GET /socket.io/?EIO=4&transport=polling&t=PIpib1C HTTP/1.1" 200 -
+2025-01-29 23:13:15,219 - INFO - [engineio.server] 8KVw00l7CWm1UyLeAAAC: Received packet MESSAGE data 0
+2025-01-29 23:13:15,220 - INFO - [server] Client connected: Mt88qnXQ4aNd9k2aAAAD from IP: 127.0.0.1
+2025-01-29 23:13:15,220 - INFO - [engineio.server] 8KVw00l7CWm1UyLeAAAC: Received request to upgrade to websocket
+2025-01-29 23:13:15,220 - INFO - [socketio.server] emitting event "connected" to Mt88qnXQ4aNd9k2aAAAD [/]
+2025-01-29 23:13:15,223 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:13:15] "GET /socket.io/?EIO=4&transport=polling&t=PIpib1I&sid=8KVw00l7CWm1UyLeAAAC HTTP/1.1" 200 -
+2025-01-29 23:13:15,223 - INFO - [engineio.server] 8KVw00l7CWm1UyLeAAAC: Sending packet MESSAGE data 2["connected",{"message":"Connected to server!","client_id":"Mt88qnXQ4aNd9k2aAAAD","available_commands":{"shutdown":"Sistemi kapat\u0131r","restart":"Sistemi yeniden ba\u015flat\u0131r","sleep":"Uyku moduna al\u0131r","volumeup":"Ses seviyesini art\u0131r\u0131r","volumedown":"Ses seviyesini azalt\u0131r","mute":"Sesi kapat\u0131r"}}]
+2025-01-29 23:13:15,224 - INFO - [engineio.server] 8KVw00l7CWm1UyLeAAAC: Sending packet MESSAGE data 0{"sid":"Mt88qnXQ4aNd9k2aAAAD"}
+2025-01-29 23:13:15,225 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:13:15] "POST /socket.io/?EIO=4&transport=polling&t=PIpib1H&sid=8KVw00l7CWm1UyLeAAAC HTTP/1.1" 200 -
+2025-01-29 23:13:15,229 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:13:15] "GET /socket.io/?EIO=4&transport=polling&t=PIpib1Q&sid=8KVw00l7CWm1UyLeAAAC HTTP/1.1" 200 -
+2025-01-29 23:13:15,232 - INFO - [engineio.server] 8KVw00l7CWm1UyLeAAAC: Upgrade to websocket successful
+2025-01-29 23:13:39,763 - INFO - [engineio.server] grgZZJPhRELnLbKqAAAA: Sending packet PING data None
+2025-01-29 23:13:39,764 - INFO - [engineio.server] grgZZJPhRELnLbKqAAAA: Received packet PONG data 
+2025-01-29 23:13:40,215 - INFO - [engineio.server] 8KVw00l7CWm1UyLeAAAC: Sending packet PING data None
+2025-01-29 23:13:40,215 - INFO - [engineio.server] 8KVw00l7CWm1UyLeAAAC: Received packet PONG data 
+2025-01-29 23:13:52,503 - INFO - [werkzeug] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-29 23:13:52,503 - INFO - [werkzeug] [33mPress CTRL+C to quit[0m
+2025-01-29 23:13:52,741 - INFO - [engineio.server] 1e_9qwpBcIB9NulDAAAA: Sending packet OPEN data {'sid': '1e_9qwpBcIB9NulDAAAA', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000, 'maxPayload': 1000000}
+2025-01-29 23:13:52,744 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:13:52] "GET /socket.io/?EIO=4&transport=polling&t=PIpik3Q HTTP/1.1" 200 -
+2025-01-29 23:13:52,751 - INFO - [engineio.server] 1e_9qwpBcIB9NulDAAAA: Received packet MESSAGE data 0
+2025-01-29 23:13:52,752 - INFO - [engineio.server] 1e_9qwpBcIB9NulDAAAA: Received request to upgrade to websocket
+2025-01-29 23:13:52,754 - INFO - [server] Client connected: Xmrk_ftAyfvL9SbIAAAB from IP: 127.0.0.1
+2025-01-29 23:13:52,755 - INFO - [socketio.server] emitting event "connected" to Xmrk_ftAyfvL9SbIAAAB [/]
+2025-01-29 23:13:52,757 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:13:52] "GET /socket.io/?EIO=4&transport=polling&t=PIpikBj&sid=1e_9qwpBcIB9NulDAAAA HTTP/1.1" 200 -
+2025-01-29 23:13:52,757 - INFO - [engineio.server] 1e_9qwpBcIB9NulDAAAA: Sending packet MESSAGE data 2["connected",{"message":"Connected to server!","client_id":"Xmrk_ftAyfvL9SbIAAAB","available_commands":{"shutdown":"Sistemi kapat\u0131r","restart":"Sistemi yeniden ba\u015flat\u0131r","sleep":"Uyku moduna al\u0131r","volumeup":"Ses seviyesini art\u0131r\u0131r","volumedown":"Ses seviyesini azalt\u0131r","mute":"Sesi kapat\u0131r"}}]
+2025-01-29 23:13:52,759 - INFO - [engineio.server] 1e_9qwpBcIB9NulDAAAA: Sending packet MESSAGE data 0{"sid":"Xmrk_ftAyfvL9SbIAAAB"}
+2025-01-29 23:13:52,762 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:13:52] "POST /socket.io/?EIO=4&transport=polling&t=PIpikBi&sid=1e_9qwpBcIB9NulDAAAA HTTP/1.1" 200 -
+2025-01-29 23:13:52,770 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:13:52] "GET /socket.io/?EIO=4&transport=polling&t=PIpikBx&sid=1e_9qwpBcIB9NulDAAAA HTTP/1.1" 200 -
+2025-01-29 23:13:52,776 - INFO - [engineio.server] 1e_9qwpBcIB9NulDAAAA: Upgrade to websocket successful
+2025-01-29 23:13:52,782 - INFO - [engineio.server] Iy5dLrsg9ZdHF0v2AAAC: Sending packet OPEN data {'sid': 'Iy5dLrsg9ZdHF0v2AAAC', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000, 'maxPayload': 1000000}
+2025-01-29 23:13:52,784 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:13:52] "GET /socket.io/?transport=polling&EIO=4&t=1738181632.2660527 HTTP/1.1" 200 -
+2025-01-29 23:13:52,793 - INFO - [engineio.server] Iy5dLrsg9ZdHF0v2AAAC: Received request to upgrade to websocket
+2025-01-29 23:13:52,801 - INFO - [engineio.server] Iy5dLrsg9ZdHF0v2AAAC: Upgrade to websocket successful
+2025-01-29 23:13:52,802 - INFO - [engineio.server] Iy5dLrsg9ZdHF0v2AAAC: Received packet MESSAGE data 0{}
+2025-01-29 23:13:52,804 - INFO - [server] Client connected: mp5i-ReVi-ZrPJPiAAAD from IP: 127.0.0.1
+2025-01-29 23:13:52,806 - INFO - [socketio.server] emitting event "connected" to mp5i-ReVi-ZrPJPiAAAD [/]
+2025-01-29 23:13:52,807 - INFO - [engineio.server] Iy5dLrsg9ZdHF0v2AAAC: Sending packet MESSAGE data 2["connected",{"message":"Connected to server!","client_id":"mp5i-ReVi-ZrPJPiAAAD","available_commands":{"shutdown":"Sistemi kapat\u0131r","restart":"Sistemi yeniden ba\u015flat\u0131r","sleep":"Uyku moduna al\u0131r","volumeup":"Ses seviyesini art\u0131r\u0131r","volumedown":"Ses seviyesini azalt\u0131r","mute":"Sesi kapat\u0131r"}}]
+2025-01-29 23:13:52,808 - INFO - [engineio.server] Iy5dLrsg9ZdHF0v2AAAC: Sending packet MESSAGE data 0{"sid":"mp5i-ReVi-ZrPJPiAAAD"}
+2025-01-29 23:13:53,739 - INFO - [server] Client disconnected: mp5i-ReVi-ZrPJPiAAAD from IP: 127.0.0.1
+2025-01-29 23:13:53,739 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:13:53] "GET /socket.io/?transport=websocket&EIO=4&sid=Iy5dLrsg9ZdHF0v2AAAC&t=1738181632.7907557 HTTP/1.1" 200 -
+2025-01-29 23:13:54,590 - INFO - [engineio.server] 9si9A4yJXoC82z2_AAAE: Sending packet OPEN data {'sid': '9si9A4yJXoC82z2_AAAE', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000, 'maxPayload': 1000000}
+2025-01-29 23:13:54,591 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:13:54] "GET /socket.io/?transport=polling&EIO=4&t=1738181634.5863411 HTTP/1.1" 200 -
+2025-01-29 23:13:54,596 - INFO - [engineio.server] 9si9A4yJXoC82z2_AAAE: Received request to upgrade to websocket
+2025-01-29 23:13:54,602 - INFO - [engineio.server] 9si9A4yJXoC82z2_AAAE: Upgrade to websocket successful
+2025-01-29 23:13:54,607 - INFO - [engineio.server] 9si9A4yJXoC82z2_AAAE: Received packet MESSAGE data 0{}
+2025-01-29 23:13:54,611 - INFO - [server] Client connected: z0YTx--AWLUuLQmRAAAF from IP: 127.0.0.1
+2025-01-29 23:13:54,611 - INFO - [socketio.server] emitting event "connected" to z0YTx--AWLUuLQmRAAAF [/]
+2025-01-29 23:13:54,612 - INFO - [engineio.server] 9si9A4yJXoC82z2_AAAE: Sending packet MESSAGE data 2["connected",{"message":"Connected to server!","client_id":"z0YTx--AWLUuLQmRAAAF","available_commands":{"shutdown":"Sistemi kapat\u0131r","restart":"Sistemi yeniden ba\u015flat\u0131r","sleep":"Uyku moduna al\u0131r","volumeup":"Ses seviyesini art\u0131r\u0131r","volumedown":"Ses seviyesini azalt\u0131r","mute":"Sesi kapat\u0131r"}}]
+2025-01-29 23:13:54,613 - INFO - [engineio.server] 9si9A4yJXoC82z2_AAAE: Sending packet MESSAGE data 0{"sid":"z0YTx--AWLUuLQmRAAAF"}
+2025-01-29 23:14:00,525 - INFO - [server] Client disconnected: Xmrk_ftAyfvL9SbIAAAB from IP: 127.0.0.1
+2025-01-29 23:14:00,526 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:14:00] "GET /socket.io/?EIO=4&transport=websocket&sid=1e_9qwpBcIB9NulDAAAA HTTP/1.1" 200 -
+2025-01-29 23:14:00,540 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:14:00] "GET / HTTP/1.1" 200 -
+2025-01-29 23:14:00,661 - INFO - [engineio.server] XLLsc1pRq3abGwhCAAAG: Sending packet OPEN data {'sid': 'XLLsc1pRq3abGwhCAAAG', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000, 'maxPayload': 1000000}
+2025-01-29 23:14:00,662 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:14:00] "GET /socket.io/?EIO=4&transport=polling&t=PIpim7J HTTP/1.1" 200 -
+2025-01-29 23:14:00,671 - INFO - [engineio.server] XLLsc1pRq3abGwhCAAAG: Received packet MESSAGE data 0
+2025-01-29 23:14:00,671 - INFO - [engineio.server] XLLsc1pRq3abGwhCAAAG: Received request to upgrade to websocket
+2025-01-29 23:14:00,673 - INFO - [server] Client connected: DjKSZWyUmfEnR6fSAAAH from IP: 127.0.0.1
+2025-01-29 23:14:00,673 - INFO - [socketio.server] emitting event "connected" to DjKSZWyUmfEnR6fSAAAH [/]
+2025-01-29 23:14:00,674 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:14:00] "GET /socket.io/?EIO=4&transport=polling&t=PIpim7S.0&sid=XLLsc1pRq3abGwhCAAAG HTTP/1.1" 200 -
+2025-01-29 23:14:00,674 - INFO - [engineio.server] XLLsc1pRq3abGwhCAAAG: Sending packet MESSAGE data 2["connected",{"message":"Connected to server!","client_id":"DjKSZWyUmfEnR6fSAAAH","available_commands":{"shutdown":"Sistemi kapat\u0131r","restart":"Sistemi yeniden ba\u015flat\u0131r","sleep":"Uyku moduna al\u0131r","volumeup":"Ses seviyesini art\u0131r\u0131r","volumedown":"Ses seviyesini azalt\u0131r","mute":"Sesi kapat\u0131r"}}]
+2025-01-29 23:14:00,675 - INFO - [engineio.server] XLLsc1pRq3abGwhCAAAG: Sending packet MESSAGE data 0{"sid":"DjKSZWyUmfEnR6fSAAAH"}
+2025-01-29 23:14:00,676 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:14:00] "POST /socket.io/?EIO=4&transport=polling&t=PIpim7S&sid=XLLsc1pRq3abGwhCAAAG HTTP/1.1" 200 -
+2025-01-29 23:14:00,684 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:14:00] "GET /socket.io/?EIO=4&transport=polling&t=PIpim7a&sid=XLLsc1pRq3abGwhCAAAG HTTP/1.1" 200 -
+2025-01-29 23:14:00,688 - INFO - [engineio.server] XLLsc1pRq3abGwhCAAAG: Upgrade to websocket successful
+2025-01-29 23:14:00,692 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:14:00,692 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:14:00] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:14:00,770 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:14:00,770 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:14:00] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:14:06,436 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:14:06,436 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:14:06] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:14:19,591 - INFO - [engineio.server] 9si9A4yJXoC82z2_AAAE: Sending packet PING data None
+2025-01-29 23:14:19,592 - INFO - [engineio.server] 9si9A4yJXoC82z2_AAAE: Received packet PONG data 
+2025-01-29 23:14:25,639 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:14:25,639 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:14:25] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:14:25,662 - INFO - [engineio.server] XLLsc1pRq3abGwhCAAAG: Sending packet PING data None
+2025-01-29 23:14:25,662 - INFO - [engineio.server] XLLsc1pRq3abGwhCAAAG: Received packet PONG data 
+2025-01-29 23:14:31,229 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:14:31,230 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:14:31] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:14:44,593 - INFO - [engineio.server] 9si9A4yJXoC82z2_AAAE: Sending packet PING data None
+2025-01-29 23:14:44,594 - INFO - [engineio.server] 9si9A4yJXoC82z2_AAAE: Received packet PONG data 
+2025-01-29 23:14:50,664 - INFO - [engineio.server] XLLsc1pRq3abGwhCAAAG: Sending packet PING data None
+2025-01-29 23:14:50,665 - INFO - [engineio.server] XLLsc1pRq3abGwhCAAAG: Received packet PONG data 
+2025-01-29 23:15:01,218 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:15:01,219 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:15:01] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:15:09,595 - INFO - [engineio.server] 9si9A4yJXoC82z2_AAAE: Sending packet PING data None
+2025-01-29 23:15:09,596 - INFO - [engineio.server] 9si9A4yJXoC82z2_AAAE: Received packet PONG data 
+2025-01-29 23:15:15,666 - INFO - [engineio.server] XLLsc1pRq3abGwhCAAAG: Sending packet PING data None
+2025-01-29 23:15:15,667 - INFO - [engineio.server] XLLsc1pRq3abGwhCAAAG: Received packet PONG data 
+2025-01-29 23:15:31,221 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:15:31,222 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:15:31] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:15:34,598 - INFO - [engineio.server] 9si9A4yJXoC82z2_AAAE: Sending packet PING data None
+2025-01-29 23:15:34,599 - INFO - [engineio.server] 9si9A4yJXoC82z2_AAAE: Received packet PONG data 
+2025-01-29 23:15:40,668 - INFO - [engineio.server] XLLsc1pRq3abGwhCAAAG: Sending packet PING data None
+2025-01-29 23:15:40,669 - INFO - [engineio.server] XLLsc1pRq3abGwhCAAAG: Received packet PONG data 
+2025-01-29 23:15:59,600 - INFO - [engineio.server] 9si9A4yJXoC82z2_AAAE: Sending packet PING data None
+2025-01-29 23:15:59,601 - INFO - [engineio.server] 9si9A4yJXoC82z2_AAAE: Received packet PONG data 
+2025-01-29 23:16:01,221 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:16:01,222 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:16:01] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:16:05,670 - INFO - [engineio.server] XLLsc1pRq3abGwhCAAAG: Sending packet PING data None
+2025-01-29 23:16:05,671 - INFO - [engineio.server] XLLsc1pRq3abGwhCAAAG: Received packet PONG data 
+2025-01-29 23:16:24,602 - INFO - [engineio.server] 9si9A4yJXoC82z2_AAAE: Sending packet PING data None
+2025-01-29 23:16:24,603 - INFO - [engineio.server] 9si9A4yJXoC82z2_AAAE: Received packet PONG data 
+2025-01-29 23:16:30,672 - INFO - [engineio.server] XLLsc1pRq3abGwhCAAAG: Sending packet PING data None
+2025-01-29 23:16:30,673 - INFO - [engineio.server] XLLsc1pRq3abGwhCAAAG: Received packet PONG data 
+2025-01-29 23:16:31,218 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:16:31,218 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:16:31] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:16:49,604 - INFO - [engineio.server] 9si9A4yJXoC82z2_AAAE: Sending packet PING data None
+2025-01-29 23:16:49,605 - INFO - [engineio.server] 9si9A4yJXoC82z2_AAAE: Received packet PONG data 
+2025-01-29 23:16:57,483 - INFO - [werkzeug] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-29 23:16:57,483 - INFO - [werkzeug] [33mPress CTRL+C to quit[0m
+2025-01-29 23:16:57,487 - INFO - [engineio.server] T8ItYzG1RVnQfTScAAAA: Sending packet OPEN data {'sid': 'T8ItYzG1RVnQfTScAAAA', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000, 'maxPayload': 1000000}
+2025-01-29 23:16:57,487 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:16:57] "GET /socket.io/?EIO=4&transport=polling&t=PIpjQ-H HTTP/1.1" 200 -
+2025-01-29 23:16:57,491 - INFO - [engineio.server] T8ItYzG1RVnQfTScAAAA: Received packet MESSAGE data 0
+2025-01-29 23:16:57,491 - INFO - [engineio.server] T8ItYzG1RVnQfTScAAAA: Received request to upgrade to websocket
+2025-01-29 23:16:57,492 - INFO - [server] Client connected: 0qwM37F-Ru3XVYhAAAAB from IP: 127.0.0.1
+2025-01-29 23:16:57,493 - INFO - [socketio.server] emitting event "connected" to 0qwM37F-Ru3XVYhAAAAB [/]
+2025-01-29 23:16:57,494 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:16:57] "GET /socket.io/?EIO=4&transport=polling&t=PIpjRII&sid=T8ItYzG1RVnQfTScAAAA HTTP/1.1" 200 -
+2025-01-29 23:16:57,494 - INFO - [engineio.server] T8ItYzG1RVnQfTScAAAA: Sending packet MESSAGE data 2["connected",{"message":"Connected to server!","client_id":"0qwM37F-Ru3XVYhAAAAB","available_commands":{"shutdown":"Sistemi kapat\u0131r","restart":"Sistemi yeniden ba\u015flat\u0131r","sleep":"Uyku moduna al\u0131r","volumeup":"Ses seviyesini art\u0131r\u0131r","volumedown":"Ses seviyesini azalt\u0131r","mute":"Sesi kapat\u0131r"}}]
+2025-01-29 23:16:57,495 - INFO - [engineio.server] T8ItYzG1RVnQfTScAAAA: Sending packet MESSAGE data 0{"sid":"0qwM37F-Ru3XVYhAAAAB"}
+2025-01-29 23:16:57,496 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:16:57] "POST /socket.io/?EIO=4&transport=polling&t=PIpjRIH&sid=T8ItYzG1RVnQfTScAAAA HTTP/1.1" 200 -
+2025-01-29 23:16:57,499 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:16:57] "GET /socket.io/?EIO=4&transport=polling&t=PIpjRIP&sid=T8ItYzG1RVnQfTScAAAA HTTP/1.1" 200 -
+2025-01-29 23:16:57,503 - INFO - [engineio.server] T8ItYzG1RVnQfTScAAAA: Upgrade to websocket successful
+2025-01-29 23:16:57,506 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:16:57,507 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:16:57] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:16:57,779 - INFO - [engineio.server] fOMVKXC7-2KKK-iZAAAC: Sending packet OPEN data {'sid': 'fOMVKXC7-2KKK-iZAAAC', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000, 'maxPayload': 1000000}
+2025-01-29 23:16:57,779 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:16:57] "GET /socket.io/?transport=polling&EIO=4&t=1738181816.2401497 HTTP/1.1" 200 -
+2025-01-29 23:16:57,783 - INFO - [engineio.server] fOMVKXC7-2KKK-iZAAAC: Received request to upgrade to websocket
+2025-01-29 23:16:57,786 - INFO - [engineio.server] fOMVKXC7-2KKK-iZAAAC: Upgrade to websocket successful
+2025-01-29 23:16:57,787 - INFO - [engineio.server] fOMVKXC7-2KKK-iZAAAC: Received packet MESSAGE data 0{}
+2025-01-29 23:16:57,788 - INFO - [server] Client connected: pWdXBA5Rz77L3RTdAAAD from IP: 127.0.0.1
+2025-01-29 23:16:57,788 - INFO - [socketio.server] emitting event "connected" to pWdXBA5Rz77L3RTdAAAD [/]
+2025-01-29 23:16:57,789 - INFO - [engineio.server] fOMVKXC7-2KKK-iZAAAC: Sending packet MESSAGE data 2["connected",{"message":"Connected to server!","client_id":"pWdXBA5Rz77L3RTdAAAD","available_commands":{"shutdown":"Sistemi kapat\u0131r","restart":"Sistemi yeniden ba\u015flat\u0131r","sleep":"Uyku moduna al\u0131r","volumeup":"Ses seviyesini art\u0131r\u0131r","volumedown":"Ses seviyesini azalt\u0131r","mute":"Sesi kapat\u0131r"}}]
+2025-01-29 23:16:57,790 - INFO - [engineio.server] fOMVKXC7-2KKK-iZAAAC: Sending packet MESSAGE data 0{"sid":"pWdXBA5Rz77L3RTdAAAD"}
+2025-01-29 23:17:01,222 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:17:01,222 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:17:01] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:17:22,488 - INFO - [engineio.server] T8ItYzG1RVnQfTScAAAA: Sending packet PING data None
+2025-01-29 23:17:22,488 - INFO - [engineio.server] T8ItYzG1RVnQfTScAAAA: Received packet PONG data 
+2025-01-29 23:17:22,780 - INFO - [engineio.server] fOMVKXC7-2KKK-iZAAAC: Sending packet PING data None
+2025-01-29 23:17:22,781 - INFO - [engineio.server] fOMVKXC7-2KKK-iZAAAC: Received packet PONG data 
+2025-01-29 23:17:31,220 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:17:31,220 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:17:31] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:17:47,489 - INFO - [engineio.server] T8ItYzG1RVnQfTScAAAA: Sending packet PING data None
+2025-01-29 23:17:47,490 - INFO - [engineio.server] T8ItYzG1RVnQfTScAAAA: Received packet PONG data 
+2025-01-29 23:17:47,782 - INFO - [engineio.server] fOMVKXC7-2KKK-iZAAAC: Sending packet PING data None
+2025-01-29 23:17:47,783 - INFO - [engineio.server] fOMVKXC7-2KKK-iZAAAC: Received packet PONG data 
+2025-01-29 23:18:12,491 - INFO - [engineio.server] T8ItYzG1RVnQfTScAAAA: Sending packet PING data None
+2025-01-29 23:18:12,491 - INFO - [engineio.server] T8ItYzG1RVnQfTScAAAA: Received packet PONG data 
+2025-01-29 23:18:12,785 - INFO - [engineio.server] fOMVKXC7-2KKK-iZAAAC: Sending packet PING data None
+2025-01-29 23:18:12,786 - INFO - [engineio.server] fOMVKXC7-2KKK-iZAAAC: Received packet PONG data 
+2025-01-29 23:18:20,224 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:18:20,225 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:18:20] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:18:37,493 - INFO - [engineio.server] T8ItYzG1RVnQfTScAAAA: Sending packet PING data None
+2025-01-29 23:18:37,494 - INFO - [engineio.server] T8ItYzG1RVnQfTScAAAA: Received packet PONG data 
+2025-01-29 23:18:37,787 - INFO - [engineio.server] fOMVKXC7-2KKK-iZAAAC: Sending packet PING data None
+2025-01-29 23:18:37,788 - INFO - [engineio.server] fOMVKXC7-2KKK-iZAAAC: Received packet PONG data 
+2025-01-29 23:18:49,637 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:18:49,637 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:18:49] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:19:01,211 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:19:01,212 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:19:01] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:19:02,495 - INFO - [engineio.server] T8ItYzG1RVnQfTScAAAA: Sending packet PING data None
+2025-01-29 23:19:02,496 - INFO - [engineio.server] T8ItYzG1RVnQfTScAAAA: Received packet PONG data 
+2025-01-29 23:19:02,789 - INFO - [engineio.server] fOMVKXC7-2KKK-iZAAAC: Sending packet PING data None
+2025-01-29 23:19:02,790 - INFO - [engineio.server] fOMVKXC7-2KKK-iZAAAC: Received packet PONG data 
+2025-01-29 23:19:27,496 - INFO - [engineio.server] T8ItYzG1RVnQfTScAAAA: Sending packet PING data None
+2025-01-29 23:19:27,497 - INFO - [engineio.server] T8ItYzG1RVnQfTScAAAA: Received packet PONG data 
+2025-01-29 23:19:27,792 - INFO - [engineio.server] fOMVKXC7-2KKK-iZAAAC: Sending packet PING data None
+2025-01-29 23:19:27,793 - INFO - [engineio.server] fOMVKXC7-2KKK-iZAAAC: Received packet PONG data 
+2025-01-29 23:19:31,219 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:19:31,220 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:19:31] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:19:52,498 - INFO - [engineio.server] T8ItYzG1RVnQfTScAAAA: Sending packet PING data None
+2025-01-29 23:19:52,499 - INFO - [engineio.server] T8ItYzG1RVnQfTScAAAA: Received packet PONG data 
+2025-01-29 23:19:52,794 - INFO - [engineio.server] fOMVKXC7-2KKK-iZAAAC: Sending packet PING data None
+2025-01-29 23:19:52,794 - INFO - [engineio.server] fOMVKXC7-2KKK-iZAAAC: Received packet PONG data 
+2025-01-29 23:20:01,215 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:20:01,215 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:20:01] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:20:17,500 - INFO - [engineio.server] T8ItYzG1RVnQfTScAAAA: Sending packet PING data None
+2025-01-29 23:20:17,500 - INFO - [engineio.server] T8ItYzG1RVnQfTScAAAA: Received packet PONG data 
+2025-01-29 23:20:17,796 - INFO - [engineio.server] fOMVKXC7-2KKK-iZAAAC: Sending packet PING data None
+2025-01-29 23:20:17,797 - INFO - [engineio.server] fOMVKXC7-2KKK-iZAAAC: Received packet PONG data 
+2025-01-29 23:20:31,224 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:20:31,224 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:20:31] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:20:42,502 - INFO - [engineio.server] T8ItYzG1RVnQfTScAAAA: Sending packet PING data None
+2025-01-29 23:20:42,502 - INFO - [engineio.server] T8ItYzG1RVnQfTScAAAA: Received packet PONG data 
+2025-01-29 23:20:42,798 - INFO - [engineio.server] fOMVKXC7-2KKK-iZAAAC: Sending packet PING data None
+2025-01-29 23:20:42,799 - INFO - [engineio.server] fOMVKXC7-2KKK-iZAAAC: Received packet PONG data 
+2025-01-29 23:21:07,503 - INFO - [engineio.server] T8ItYzG1RVnQfTScAAAA: Sending packet PING data None
+2025-01-29 23:21:07,504 - INFO - [engineio.server] T8ItYzG1RVnQfTScAAAA: Received packet PONG data 
+2025-01-29 23:21:07,800 - INFO - [engineio.server] fOMVKXC7-2KKK-iZAAAC: Sending packet PING data None
+2025-01-29 23:21:07,801 - INFO - [engineio.server] fOMVKXC7-2KKK-iZAAAC: Received packet PONG data 
+2025-01-29 23:21:20,216 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:21:20,216 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:21:20] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:21:32,505 - INFO - [engineio.server] T8ItYzG1RVnQfTScAAAA: Sending packet PING data None
+2025-01-29 23:21:32,505 - INFO - [engineio.server] T8ItYzG1RVnQfTScAAAA: Received packet PONG data 
+2025-01-29 23:21:32,802 - INFO - [engineio.server] fOMVKXC7-2KKK-iZAAAC: Sending packet PING data None
+2025-01-29 23:21:32,803 - INFO - [engineio.server] fOMVKXC7-2KKK-iZAAAC: Received packet PONG data 
+2025-01-29 23:21:57,507 - INFO - [engineio.server] T8ItYzG1RVnQfTScAAAA: Sending packet PING data None
+2025-01-29 23:21:57,509 - INFO - [engineio.server] T8ItYzG1RVnQfTScAAAA: Received packet PONG data 
+2025-01-29 23:21:57,805 - INFO - [engineio.server] fOMVKXC7-2KKK-iZAAAC: Sending packet PING data None
+2025-01-29 23:21:57,806 - INFO - [engineio.server] fOMVKXC7-2KKK-iZAAAC: Received packet PONG data 
+2025-01-29 23:22:20,224 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:22:20,224 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:22:20] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:22:22,509 - INFO - [engineio.server] T8ItYzG1RVnQfTScAAAA: Sending packet PING data None
+2025-01-29 23:22:22,509 - INFO - [engineio.server] T8ItYzG1RVnQfTScAAAA: Received packet PONG data 
+2025-01-29 23:22:22,807 - INFO - [engineio.server] fOMVKXC7-2KKK-iZAAAC: Sending packet PING data None
+2025-01-29 23:22:22,808 - INFO - [engineio.server] fOMVKXC7-2KKK-iZAAAC: Received packet PONG data 
+2025-01-29 23:22:47,511 - INFO - [engineio.server] T8ItYzG1RVnQfTScAAAA: Sending packet PING data None
+2025-01-29 23:22:47,513 - INFO - [engineio.server] T8ItYzG1RVnQfTScAAAA: Received packet PONG data 
+2025-01-29 23:22:47,809 - INFO - [engineio.server] fOMVKXC7-2KKK-iZAAAC: Sending packet PING data None
+2025-01-29 23:22:47,810 - INFO - [engineio.server] fOMVKXC7-2KKK-iZAAAC: Received packet PONG data 
+2025-01-29 23:23:12,515 - INFO - [engineio.server] T8ItYzG1RVnQfTScAAAA: Sending packet PING data None
+2025-01-29 23:23:12,516 - INFO - [engineio.server] T8ItYzG1RVnQfTScAAAA: Received packet PONG data 
+2025-01-29 23:23:12,811 - INFO - [engineio.server] fOMVKXC7-2KKK-iZAAAC: Sending packet PING data None
+2025-01-29 23:23:12,812 - INFO - [engineio.server] fOMVKXC7-2KKK-iZAAAC: Received packet PONG data 
+2025-01-29 23:23:20,211 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:23:20,212 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:23:20] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:23:37,516 - INFO - [engineio.server] T8ItYzG1RVnQfTScAAAA: Sending packet PING data None
+2025-01-29 23:23:37,517 - INFO - [engineio.server] T8ItYzG1RVnQfTScAAAA: Received packet PONG data 
+2025-01-29 23:23:37,814 - INFO - [engineio.server] fOMVKXC7-2KKK-iZAAAC: Sending packet PING data None
+2025-01-29 23:23:37,815 - INFO - [engineio.server] fOMVKXC7-2KKK-iZAAAC: Received packet PONG data 
+2025-01-29 23:24:02,518 - INFO - [engineio.server] T8ItYzG1RVnQfTScAAAA: Sending packet PING data None
+2025-01-29 23:24:02,519 - INFO - [engineio.server] T8ItYzG1RVnQfTScAAAA: Received packet PONG data 
+2025-01-29 23:24:02,816 - INFO - [engineio.server] fOMVKXC7-2KKK-iZAAAC: Sending packet PING data None
+2025-01-29 23:24:02,817 - INFO - [engineio.server] fOMVKXC7-2KKK-iZAAAC: Received packet PONG data 
+2025-01-29 23:24:20,221 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:24:20,221 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:24:20] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:24:27,520 - INFO - [engineio.server] T8ItYzG1RVnQfTScAAAA: Sending packet PING data None
+2025-01-29 23:24:27,520 - INFO - [engineio.server] T8ItYzG1RVnQfTScAAAA: Received packet PONG data 
+2025-01-29 23:24:27,818 - INFO - [engineio.server] fOMVKXC7-2KKK-iZAAAC: Sending packet PING data None
+2025-01-29 23:24:27,819 - INFO - [engineio.server] fOMVKXC7-2KKK-iZAAAC: Received packet PONG data 
+2025-01-29 23:24:52,522 - INFO - [engineio.server] T8ItYzG1RVnQfTScAAAA: Sending packet PING data None
+2025-01-29 23:24:52,522 - INFO - [engineio.server] T8ItYzG1RVnQfTScAAAA: Received packet PONG data 
+2025-01-29 23:24:52,820 - INFO - [engineio.server] fOMVKXC7-2KKK-iZAAAC: Sending packet PING data None
+2025-01-29 23:24:52,821 - INFO - [engineio.server] fOMVKXC7-2KKK-iZAAAC: Received packet PONG data 
+2025-01-29 23:25:17,524 - INFO - [engineio.server] T8ItYzG1RVnQfTScAAAA: Sending packet PING data None
+2025-01-29 23:25:17,525 - INFO - [engineio.server] T8ItYzG1RVnQfTScAAAA: Received packet PONG data 
+2025-01-29 23:25:17,823 - INFO - [engineio.server] fOMVKXC7-2KKK-iZAAAC: Sending packet PING data None
+2025-01-29 23:25:17,824 - INFO - [engineio.server] fOMVKXC7-2KKK-iZAAAC: Received packet PONG data 
+2025-01-29 23:25:20,219 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:25:20,220 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:25:20] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:25:42,526 - INFO - [engineio.server] T8ItYzG1RVnQfTScAAAA: Sending packet PING data None
+2025-01-29 23:25:42,528 - INFO - [engineio.server] T8ItYzG1RVnQfTScAAAA: Received packet PONG data 
+2025-01-29 23:25:42,825 - INFO - [engineio.server] fOMVKXC7-2KKK-iZAAAC: Sending packet PING data None
+2025-01-29 23:25:42,826 - INFO - [engineio.server] fOMVKXC7-2KKK-iZAAAC: Received packet PONG data 
+2025-01-29 23:25:57,664 - INFO - [werkzeug] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-29 23:25:57,664 - INFO - [werkzeug] [33mPress CTRL+C to quit[0m
+2025-01-29 23:25:57,730 - INFO - [engineio.server] Fl3oEaaAKKGSbAk1AAAA: Sending packet OPEN data {'sid': 'Fl3oEaaAKKGSbAk1AAAA', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000, 'maxPayload': 1000000}
+2025-01-29 23:25:57,730 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:25:57] "GET /socket.io/?EIO=4&transport=polling&t=PIplV3U HTTP/1.1" 200 -
+2025-01-29 23:25:57,734 - INFO - [engineio.server] Fl3oEaaAKKGSbAk1AAAA: Received packet MESSAGE data 0
+2025-01-29 23:25:57,735 - INFO - [server] Client connected: pIJrfvv7k1U9Bu6xAAAB from IP: 127.0.0.1
+2025-01-29 23:25:57,735 - INFO - [engineio.server] Fl3oEaaAKKGSbAk1AAAA: Received request to upgrade to websocket
+2025-01-29 23:25:57,736 - INFO - [socketio.server] emitting event "connected" to pIJrfvv7k1U9Bu6xAAAB [/]
+2025-01-29 23:25:57,737 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:25:57] "GET /socket.io/?EIO=4&transport=polling&t=PIplVBb&sid=Fl3oEaaAKKGSbAk1AAAA HTTP/1.1" 200 -
+2025-01-29 23:25:57,737 - INFO - [engineio.server] Fl3oEaaAKKGSbAk1AAAA: Sending packet MESSAGE data 2["connected",{"message":"Connected to server!","client_id":"pIJrfvv7k1U9Bu6xAAAB","available_commands":{"shutdown":"Sistemi kapat\u0131r","restart":"Sistemi yeniden ba\u015flat\u0131r","sleep":"Uyku moduna al\u0131r","volumeup":"Ses seviyesini art\u0131r\u0131r","volumedown":"Ses seviyesini azalt\u0131r","mute":"Sesi kapat\u0131r"}}]
+2025-01-29 23:25:57,738 - INFO - [engineio.server] Fl3oEaaAKKGSbAk1AAAA: Sending packet MESSAGE data 0{"sid":"pIJrfvv7k1U9Bu6xAAAB"}
+2025-01-29 23:25:57,738 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:25:57] "POST /socket.io/?EIO=4&transport=polling&t=PIplVBa&sid=Fl3oEaaAKKGSbAk1AAAA HTTP/1.1" 200 -
+2025-01-29 23:25:57,742 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:25:57] "GET /socket.io/?EIO=4&transport=polling&t=PIplVBh&sid=Fl3oEaaAKKGSbAk1AAAA HTTP/1.1" 200 -
+2025-01-29 23:25:57,745 - INFO - [engineio.server] Fl3oEaaAKKGSbAk1AAAA: Upgrade to websocket successful
+2025-01-29 23:25:57,748 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:25:57,749 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:25:57] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:25:57,977 - INFO - [engineio.server] OF7gEMMdv_RTe6ydAAAC: Sending packet OPEN data {'sid': 'OF7gEMMdv_RTe6ydAAAC', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000, 'maxPayload': 1000000}
+2025-01-29 23:25:57,977 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:25:57] "GET /socket.io/?transport=polling&EIO=4&t=1738182356.4399073 HTTP/1.1" 200 -
+2025-01-29 23:25:57,992 - INFO - [engineio.server] OF7gEMMdv_RTe6ydAAAC: Received request to upgrade to websocket
+2025-01-29 23:25:57,995 - INFO - [engineio.server] OF7gEMMdv_RTe6ydAAAC: Upgrade to websocket successful
+2025-01-29 23:25:57,996 - INFO - [engineio.server] OF7gEMMdv_RTe6ydAAAC: Received packet MESSAGE data 0{}
+2025-01-29 23:25:57,997 - INFO - [server] Client connected: mOOwJTYOwK5RgP1eAAAD from IP: 127.0.0.1
+2025-01-29 23:25:57,997 - INFO - [socketio.server] emitting event "connected" to mOOwJTYOwK5RgP1eAAAD [/]
+2025-01-29 23:25:57,997 - INFO - [engineio.server] OF7gEMMdv_RTe6ydAAAC: Sending packet MESSAGE data 2["connected",{"message":"Connected to server!","client_id":"mOOwJTYOwK5RgP1eAAAD","available_commands":{"shutdown":"Sistemi kapat\u0131r","restart":"Sistemi yeniden ba\u015flat\u0131r","sleep":"Uyku moduna al\u0131r","volumeup":"Ses seviyesini art\u0131r\u0131r","volumedown":"Ses seviyesini azalt\u0131r","mute":"Sesi kapat\u0131r"}}]
+2025-01-29 23:25:57,998 - INFO - [engineio.server] OF7gEMMdv_RTe6ydAAAC: Sending packet MESSAGE data 0{"sid":"mOOwJTYOwK5RgP1eAAAD"}
+2025-01-29 23:26:20,212 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:26:20,213 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:26:20] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:26:22,730 - INFO - [engineio.server] Fl3oEaaAKKGSbAk1AAAA: Sending packet PING data None
+2025-01-29 23:26:22,730 - INFO - [engineio.server] Fl3oEaaAKKGSbAk1AAAA: Received packet PONG data 
+2025-01-29 23:26:23,001 - INFO - [engineio.server] OF7gEMMdv_RTe6ydAAAC: Sending packet PING data None
+2025-01-29 23:26:23,006 - INFO - [engineio.server] OF7gEMMdv_RTe6ydAAAC: Received packet PONG data 
+2025-01-29 23:26:47,732 - INFO - [engineio.server] Fl3oEaaAKKGSbAk1AAAA: Sending packet PING data None
+2025-01-29 23:26:47,733 - INFO - [engineio.server] Fl3oEaaAKKGSbAk1AAAA: Received packet PONG data 
+2025-01-29 23:26:48,008 - INFO - [engineio.server] OF7gEMMdv_RTe6ydAAAC: Sending packet PING data None
+2025-01-29 23:26:48,009 - INFO - [engineio.server] OF7gEMMdv_RTe6ydAAAC: Received packet PONG data 
+2025-01-29 23:27:12,734 - INFO - [engineio.server] Fl3oEaaAKKGSbAk1AAAA: Sending packet PING data None
+2025-01-29 23:27:12,735 - INFO - [engineio.server] Fl3oEaaAKKGSbAk1AAAA: Received packet PONG data 
+2025-01-29 23:27:13,010 - INFO - [engineio.server] OF7gEMMdv_RTe6ydAAAC: Sending packet PING data None
+2025-01-29 23:27:13,011 - INFO - [engineio.server] OF7gEMMdv_RTe6ydAAAC: Received packet PONG data 
+2025-01-29 23:27:20,225 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:27:20,225 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:27:20] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:27:37,736 - INFO - [engineio.server] Fl3oEaaAKKGSbAk1AAAA: Sending packet PING data None
+2025-01-29 23:27:37,736 - INFO - [engineio.server] Fl3oEaaAKKGSbAk1AAAA: Received packet PONG data 
+2025-01-29 23:27:38,012 - INFO - [engineio.server] OF7gEMMdv_RTe6ydAAAC: Sending packet PING data None
+2025-01-29 23:27:38,013 - INFO - [engineio.server] OF7gEMMdv_RTe6ydAAAC: Received packet PONG data 
+2025-01-29 23:28:02,738 - INFO - [engineio.server] Fl3oEaaAKKGSbAk1AAAA: Sending packet PING data None
+2025-01-29 23:28:02,739 - INFO - [engineio.server] Fl3oEaaAKKGSbAk1AAAA: Received packet PONG data 
+2025-01-29 23:28:03,015 - INFO - [engineio.server] OF7gEMMdv_RTe6ydAAAC: Sending packet PING data None
+2025-01-29 23:28:03,016 - INFO - [engineio.server] OF7gEMMdv_RTe6ydAAAC: Received packet PONG data 
+2025-01-29 23:28:20,212 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:28:20,213 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:28:20] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:28:27,740 - INFO - [engineio.server] Fl3oEaaAKKGSbAk1AAAA: Sending packet PING data None
+2025-01-29 23:28:27,741 - INFO - [engineio.server] Fl3oEaaAKKGSbAk1AAAA: Received packet PONG data 
+2025-01-29 23:28:28,017 - INFO - [engineio.server] OF7gEMMdv_RTe6ydAAAC: Sending packet PING data None
+2025-01-29 23:28:28,018 - INFO - [engineio.server] OF7gEMMdv_RTe6ydAAAC: Received packet PONG data 
+2025-01-29 23:28:52,742 - INFO - [engineio.server] Fl3oEaaAKKGSbAk1AAAA: Sending packet PING data None
+2025-01-29 23:28:52,742 - INFO - [engineio.server] Fl3oEaaAKKGSbAk1AAAA: Received packet PONG data 
+2025-01-29 23:28:53,019 - INFO - [engineio.server] OF7gEMMdv_RTe6ydAAAC: Sending packet PING data None
+2025-01-29 23:28:53,020 - INFO - [engineio.server] OF7gEMMdv_RTe6ydAAAC: Received packet PONG data 
+2025-01-29 23:29:36,366 - INFO - [werkzeug] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-29 23:29:36,366 - INFO - [werkzeug] [33mPress CTRL+C to quit[0m
+2025-01-29 23:29:41,183 - INFO - [engineio.server] OYfR7Ir0H-0HjgN8AAAA: Sending packet OPEN data {'sid': 'OYfR7Ir0H-0HjgN8AAAA', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000, 'maxPayload': 1000000}
+2025-01-29 23:29:41,183 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:29:41] "GET /socket.io/?transport=polling&EIO=4&t=1738182581.1663353 HTTP/1.1" 200 -
+2025-01-29 23:29:41,187 - INFO - [engineio.server] OYfR7Ir0H-0HjgN8AAAA: Received request to upgrade to websocket
+2025-01-29 23:29:41,189 - INFO - [engineio.server] OYfR7Ir0H-0HjgN8AAAA: Upgrade to websocket successful
+2025-01-29 23:29:41,189 - INFO - [engineio.server] OYfR7Ir0H-0HjgN8AAAA: Received packet MESSAGE data 0{}
+2025-01-29 23:29:41,190 - INFO - [server] Client connected: Rq2pE_bIcjlkFWQ0AAAB from IP: 127.0.0.1
+2025-01-29 23:29:41,191 - INFO - [socketio.server] emitting event "connected" to Rq2pE_bIcjlkFWQ0AAAB [/]
+2025-01-29 23:29:41,191 - INFO - [engineio.server] OYfR7Ir0H-0HjgN8AAAA: Sending packet MESSAGE data 2["connected",{"message":"Connected to server!","client_id":"Rq2pE_bIcjlkFWQ0AAAB","available_commands":{"shutdown":"Sistemi kapat\u0131r","restart":"Sistemi yeniden ba\u015flat\u0131r","sleep":"Uyku moduna al\u0131r","volumeup":"Ses seviyesini art\u0131r\u0131r","volumedown":"Ses seviyesini azalt\u0131r","mute":"Sesi kapat\u0131r"}}]
+2025-01-29 23:29:41,191 - INFO - [engineio.server] OYfR7Ir0H-0HjgN8AAAA: Sending packet MESSAGE data 0{"sid":"Rq2pE_bIcjlkFWQ0AAAB"}
+2025-01-29 23:30:00,128 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:30:00] "GET / HTTP/1.1" 200 -
+2025-01-29 23:30:00,174 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Sending packet OPEN data {'sid': 'dqMgbkCnBty7l9CdAAAC', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000, 'maxPayload': 1000000}
+2025-01-29 23:30:00,175 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:30:00] "GET /socket.io/?EIO=4&transport=polling&t=PIpmQNh HTTP/1.1" 200 -
+2025-01-29 23:30:00,190 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:30:00,190 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:30:00] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:30:00,209 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Received packet MESSAGE data 0
+2025-01-29 23:30:00,210 - INFO - [server] Client connected: qu232EUlGLCXL4SfAAAD from IP: 127.0.0.1
+2025-01-29 23:30:00,209 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Received request to upgrade to websocket
+2025-01-29 23:30:00,211 - INFO - [socketio.server] emitting event "connected" to qu232EUlGLCXL4SfAAAD [/]
+2025-01-29 23:30:00,212 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:30:00] "GET /socket.io/?EIO=4&transport=polling&t=PIpmQOF&sid=dqMgbkCnBty7l9CdAAAC HTTP/1.1" 200 -
+2025-01-29 23:30:00,212 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Sending packet MESSAGE data 2["connected",{"message":"Connected to server!","client_id":"qu232EUlGLCXL4SfAAAD","available_commands":{"shutdown":"Sistemi kapat\u0131r","restart":"Sistemi yeniden ba\u015flat\u0131r","sleep":"Uyku moduna al\u0131r","volumeup":"Ses seviyesini art\u0131r\u0131r","volumedown":"Ses seviyesini azalt\u0131r","mute":"Sesi kapat\u0131r"}}]
+2025-01-29 23:30:00,213 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Sending packet MESSAGE data 0{"sid":"qu232EUlGLCXL4SfAAAD"}
+2025-01-29 23:30:00,214 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:30:00] "POST /socket.io/?EIO=4&transport=polling&t=PIpmQOE&sid=dqMgbkCnBty7l9CdAAAC HTTP/1.1" 200 -
+2025-01-29 23:30:00,221 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:30:00] "GET /socket.io/?EIO=4&transport=polling&t=PIpmQOQ&sid=dqMgbkCnBty7l9CdAAAC HTTP/1.1" 200 -
+2025-01-29 23:30:00,226 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Upgrade to websocket successful
+2025-01-29 23:30:00,230 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:30:00,231 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:30:00] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:30:06,184 - INFO - [engineio.server] OYfR7Ir0H-0HjgN8AAAA: Sending packet PING data None
+2025-01-29 23:30:06,185 - INFO - [engineio.server] OYfR7Ir0H-0HjgN8AAAA: Received packet PONG data 
+2025-01-29 23:30:09,866 - INFO - [engineio.server] ZCs7m5ZY_-Mls3YmAAAE: Sending packet OPEN data {'sid': 'ZCs7m5ZY_-Mls3YmAAAE', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000, 'maxPayload': 1000000}
+2025-01-29 23:30:09,867 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:30:09] "GET /socket.io/?transport=polling&EIO=4 HTTP/1.1" 200 -
+2025-01-29 23:30:25,176 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Sending packet PING data None
+2025-01-29 23:30:25,177 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Received packet PONG data 
+2025-01-29 23:30:30,221 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:30:30,222 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:30:30] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:30:31,185 - INFO - [engineio.server] OYfR7Ir0H-0HjgN8AAAA: Sending packet PING data None
+2025-01-29 23:30:31,186 - INFO - [engineio.server] OYfR7Ir0H-0HjgN8AAAA: Received packet PONG data 
+2025-01-29 23:30:34,867 - INFO - [engineio.server] ZCs7m5ZY_-Mls3YmAAAE: Sending packet PING data None
+2025-01-29 23:30:50,178 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Sending packet PING data None
+2025-01-29 23:30:50,178 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Received packet PONG data 
+2025-01-29 23:30:56,188 - INFO - [engineio.server] OYfR7Ir0H-0HjgN8AAAA: Sending packet PING data None
+2025-01-29 23:30:56,189 - INFO - [engineio.server] OYfR7Ir0H-0HjgN8AAAA: Received packet PONG data 
+2025-01-29 23:31:00,216 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:31:00,217 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:31:00] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:31:14,609 - INFO - [engineio.server] ZCs7m5ZY_-Mls3YmAAAE: Client is gone, closing socket
+2025-01-29 23:31:14,609 - INFO - [engineio.server] ZCs7m5ZY_-Mls3YmAAAE: Client is gone, closing socket
+2025-01-29 23:31:15,180 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Sending packet PING data None
+2025-01-29 23:31:15,181 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Received packet PONG data 
+2025-01-29 23:31:21,190 - INFO - [engineio.server] OYfR7Ir0H-0HjgN8AAAA: Sending packet PING data None
+2025-01-29 23:31:21,191 - INFO - [engineio.server] OYfR7Ir0H-0HjgN8AAAA: Received packet PONG data 
+2025-01-29 23:31:30,221 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:31:30,221 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:31:30] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:31:40,182 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Sending packet PING data None
+2025-01-29 23:31:40,184 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Received packet PONG data 
+2025-01-29 23:31:46,192 - INFO - [engineio.server] OYfR7Ir0H-0HjgN8AAAA: Sending packet PING data None
+2025-01-29 23:31:46,193 - INFO - [engineio.server] OYfR7Ir0H-0HjgN8AAAA: Received packet PONG data 
+2025-01-29 23:32:00,218 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:32:00,218 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:32:00] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:32:05,185 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Sending packet PING data None
+2025-01-29 23:32:05,185 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Received packet PONG data 
+2025-01-29 23:32:08,046 - INFO - [server] Client disconnected: Rq2pE_bIcjlkFWQ0AAAB from IP: 127.0.0.1
+2025-01-29 23:32:08,046 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:32:08] "GET /socket.io/?transport=websocket&EIO=4&sid=OYfR7Ir0H-0HjgN8AAAA&t=1738182581.1851444 HTTP/1.1" 200 -
+2025-01-29 23:32:30,186 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Sending packet PING data None
+2025-01-29 23:32:30,187 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Received packet PONG data 
+2025-01-29 23:32:30,215 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:32:30,216 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:32:30] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:32:55,189 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Sending packet PING data None
+2025-01-29 23:32:55,190 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Received packet PONG data 
+2025-01-29 23:33:20,191 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Sending packet PING data None
+2025-01-29 23:33:20,192 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Received packet PONG data 
+2025-01-29 23:33:20,215 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:33:20,216 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:33:20] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:33:45,194 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Sending packet PING data None
+2025-01-29 23:33:45,195 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Received packet PONG data 
+2025-01-29 23:34:10,196 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Sending packet PING data None
+2025-01-29 23:34:10,197 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Received packet PONG data 
+2025-01-29 23:34:20,217 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:34:20,217 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:34:20] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:34:35,198 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Sending packet PING data None
+2025-01-29 23:34:35,199 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Received packet PONG data 
+2025-01-29 23:35:00,200 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Sending packet PING data None
+2025-01-29 23:35:00,201 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Received packet PONG data 
+2025-01-29 23:35:08,749 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:35:08] "GET / HTTP/1.1" 200 -
+2025-01-29 23:35:08,789 - INFO - [engineio.server] QB4m3Hg5rhZzxnu2AAAF: Sending packet OPEN data {'sid': 'QB4m3Hg5rhZzxnu2AAAF', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000, 'maxPayload': 1000000}
+2025-01-29 23:35:08,790 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:35:08] "GET /socket.io/?EIO=4&transport=polling&t=PIpnbjp HTTP/1.1" 200 -
+2025-01-29 23:35:08,818 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:35:08,819 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:35:08] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:35:08,827 - INFO - [engineio.server] QB4m3Hg5rhZzxnu2AAAF: Received packet MESSAGE data 0
+2025-01-29 23:35:08,827 - INFO - [server] Client connected: M_pEpcFaBq4GGBwNAAAG from IP: 127.0.0.1
+2025-01-29 23:35:08,827 - INFO - [socketio.server] emitting event "connected" to M_pEpcFaBq4GGBwNAAAG [/]
+2025-01-29 23:35:08,828 - INFO - [engineio.server] QB4m3Hg5rhZzxnu2AAAF: Sending packet MESSAGE data 2["connected",{"message":"Connected to server!","client_id":"M_pEpcFaBq4GGBwNAAAG","available_commands":{"shutdown":"Sistemi kapat\u0131r","restart":"Sistemi yeniden ba\u015flat\u0131r","sleep":"Uyku moduna al\u0131r","volumeup":"Ses seviyesini art\u0131r\u0131r","volumedown":"Ses seviyesini azalt\u0131r","mute":"Sesi kapat\u0131r"}}]
+2025-01-29 23:35:08,828 - INFO - [engineio.server] QB4m3Hg5rhZzxnu2AAAF: Sending packet MESSAGE data 0{"sid":"M_pEpcFaBq4GGBwNAAAG"}
+2025-01-29 23:35:08,829 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:35:08] "POST /socket.io/?EIO=4&transport=polling&t=PIpnbkJ&sid=QB4m3Hg5rhZzxnu2AAAF HTTP/1.1" 200 -
+2025-01-29 23:35:08,831 - INFO - [engineio.server] QB4m3Hg5rhZzxnu2AAAF: Received request to upgrade to websocket
+2025-01-29 23:35:08,832 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:35:08] "GET /socket.io/?EIO=4&transport=polling&t=PIpnbkK&sid=QB4m3Hg5rhZzxnu2AAAF HTTP/1.1" 200 -
+2025-01-29 23:35:08,840 - INFO - [engineio.server] QB4m3Hg5rhZzxnu2AAAF: Upgrade to websocket successful
+2025-01-29 23:35:08,842 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:35:08,843 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:35:08] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:35:13,779 - INFO - [server] Client disconnected: M_pEpcFaBq4GGBwNAAAG from IP: 127.0.0.1
+2025-01-29 23:35:13,779 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:35:13] "GET /socket.io/?EIO=4&transport=websocket&sid=QB4m3Hg5rhZzxnu2AAAF HTTP/1.1" 200 -
+2025-01-29 23:35:13,789 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:35:13] "GET / HTTP/1.1" 200 -
+2025-01-29 23:35:13,809 - INFO - [engineio.server] saW976bjCayFMzEqAAAH: Sending packet OPEN data {'sid': 'saW976bjCayFMzEqAAAH', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000, 'maxPayload': 1000000}
+2025-01-29 23:35:13,810 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:35:13,811 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:35:13] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:35:13,811 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:35:13] "GET /socket.io/?EIO=4&transport=polling&t=PIpncy9 HTTP/1.1" 200 -
+2025-01-29 23:35:13,819 - INFO - [engineio.server] saW976bjCayFMzEqAAAH: Received packet MESSAGE data 0
+2025-01-29 23:35:13,820 - INFO - [server] Client connected: ANUeJ1vSytObclRyAAAI from IP: 127.0.0.1
+2025-01-29 23:35:13,820 - INFO - [engineio.server] saW976bjCayFMzEqAAAH: Received request to upgrade to websocket
+2025-01-29 23:35:13,821 - INFO - [socketio.server] emitting event "connected" to ANUeJ1vSytObclRyAAAI [/]
+2025-01-29 23:35:13,822 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:35:13] "GET /socket.io/?EIO=4&transport=polling&t=PIpncyO.0&sid=saW976bjCayFMzEqAAAH HTTP/1.1" 200 -
+2025-01-29 23:35:13,822 - INFO - [engineio.server] saW976bjCayFMzEqAAAH: Sending packet MESSAGE data 2["connected",{"message":"Connected to server!","client_id":"ANUeJ1vSytObclRyAAAI","available_commands":{"shutdown":"Sistemi kapat\u0131r","restart":"Sistemi yeniden ba\u015flat\u0131r","sleep":"Uyku moduna al\u0131r","volumeup":"Ses seviyesini art\u0131r\u0131r","volumedown":"Ses seviyesini azalt\u0131r","mute":"Sesi kapat\u0131r"}}]
+2025-01-29 23:35:13,823 - INFO - [engineio.server] saW976bjCayFMzEqAAAH: Sending packet MESSAGE data 0{"sid":"ANUeJ1vSytObclRyAAAI"}
+2025-01-29 23:35:13,824 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:35:13] "POST /socket.io/?EIO=4&transport=polling&t=PIpncyO&sid=saW976bjCayFMzEqAAAH HTTP/1.1" 200 -
+2025-01-29 23:35:13,828 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:35:13] "GET /socket.io/?EIO=4&transport=polling&t=PIpncyX&sid=saW976bjCayFMzEqAAAH HTTP/1.1" 200 -
+2025-01-29 23:35:13,832 - INFO - [engineio.server] saW976bjCayFMzEqAAAH: Upgrade to websocket successful
+2025-01-29 23:35:13,835 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:35:13,835 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:35:13] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:35:14,539 - INFO - [server] Client disconnected: ANUeJ1vSytObclRyAAAI from IP: 127.0.0.1
+2025-01-29 23:35:14,539 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:35:14] "GET /socket.io/?EIO=4&transport=websocket&sid=saW976bjCayFMzEqAAAH HTTP/1.1" 200 -
+2025-01-29 23:35:14,548 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:35:14] "GET / HTTP/1.1" 200 -
+2025-01-29 23:35:14,561 - INFO - [engineio.server] BDFzaukKtpqcqahzAAAJ: Sending packet OPEN data {'sid': 'BDFzaukKtpqcqahzAAAJ', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000, 'maxPayload': 1000000}
+2025-01-29 23:35:14,562 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:35:14] "GET /socket.io/?EIO=4&transport=polling&t=PIpnd7- HTTP/1.1" 200 -
+2025-01-29 23:35:14,565 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:35:14,565 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:35:14] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:35:14,570 - INFO - [engineio.server] BDFzaukKtpqcqahzAAAJ: Received packet MESSAGE data 0
+2025-01-29 23:35:14,570 - INFO - [engineio.server] BDFzaukKtpqcqahzAAAJ: Received request to upgrade to websocket
+2025-01-29 23:35:14,571 - INFO - [server] Client connected: 3SmyEJM03oKznhcqAAAK from IP: 127.0.0.1
+2025-01-29 23:35:14,572 - INFO - [socketio.server] emitting event "connected" to 3SmyEJM03oKznhcqAAAK [/]
+2025-01-29 23:35:14,573 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:35:14] "GET /socket.io/?EIO=4&transport=polling&t=PIpnd86.0&sid=BDFzaukKtpqcqahzAAAJ HTTP/1.1" 200 -
+2025-01-29 23:35:14,572 - INFO - [engineio.server] BDFzaukKtpqcqahzAAAJ: Sending packet MESSAGE data 2["connected",{"message":"Connected to server!","client_id":"3SmyEJM03oKznhcqAAAK","available_commands":{"shutdown":"Sistemi kapat\u0131r","restart":"Sistemi yeniden ba\u015flat\u0131r","sleep":"Uyku moduna al\u0131r","volumeup":"Ses seviyesini art\u0131r\u0131r","volumedown":"Ses seviyesini azalt\u0131r","mute":"Sesi kapat\u0131r"}}]
+2025-01-29 23:35:14,574 - INFO - [engineio.server] BDFzaukKtpqcqahzAAAJ: Sending packet MESSAGE data 0{"sid":"3SmyEJM03oKznhcqAAAK"}
+2025-01-29 23:35:14,574 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:35:14] "POST /socket.io/?EIO=4&transport=polling&t=PIpnd86&sid=BDFzaukKtpqcqahzAAAJ HTTP/1.1" 200 -
+2025-01-29 23:35:14,578 - INFO - [engineio.server] BDFzaukKtpqcqahzAAAJ: Upgrade to websocket successful
+2025-01-29 23:35:14,581 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:35:14,582 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:35:14] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:35:15,696 - INFO - [server] Client disconnected: 3SmyEJM03oKznhcqAAAK from IP: 127.0.0.1
+2025-01-29 23:35:15,696 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:35:15] "GET /socket.io/?EIO=4&transport=websocket&sid=BDFzaukKtpqcqahzAAAJ HTTP/1.1" 200 -
+2025-01-29 23:35:15,725 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:35:15,725 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:35:15] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:35:25,202 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Sending packet PING data None
+2025-01-29 23:35:25,203 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Received packet PONG data 
+2025-01-29 23:35:30,211 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:35:30,212 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:35:30] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:35:50,204 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Sending packet PING data None
+2025-01-29 23:35:50,205 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Received packet PONG data 
+2025-01-29 23:36:00,222 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:36:00,223 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:36:00] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:36:15,206 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Sending packet PING data None
+2025-01-29 23:36:15,206 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Received packet PONG data 
+2025-01-29 23:36:40,208 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Sending packet PING data None
+2025-01-29 23:36:40,209 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Received packet PONG data 
+2025-01-29 23:37:01,211 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:37:01,212 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:37:01] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:37:05,210 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Sending packet PING data None
+2025-01-29 23:37:05,211 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Received packet PONG data 
+2025-01-29 23:37:30,212 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Sending packet PING data None
+2025-01-29 23:37:30,213 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Received packet PONG data 
+2025-01-29 23:37:55,215 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Sending packet PING data None
+2025-01-29 23:37:55,216 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Received packet PONG data 
+2025-01-29 23:38:02,219 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:38:02,220 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:38:02] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:38:20,217 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Sending packet PING data None
+2025-01-29 23:38:20,219 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Received packet PONG data 
+2025-01-29 23:38:45,220 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Sending packet PING data None
+2025-01-29 23:38:45,221 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Received packet PONG data 
+2025-01-29 23:39:03,213 - WARNING - [server] Invalid API key attempt: 127.0.0.1
+2025-01-29 23:39:03,214 - INFO - [werkzeug] 127.0.0.1 - - [29/Jan/2025 23:39:03] "[31m[1mGET /clients HTTP/1.1[0m" 403 -
+2025-01-29 23:39:10,222 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Sending packet PING data None
+2025-01-29 23:39:10,223 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Received packet PONG data 
+2025-01-29 23:39:35,224 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Sending packet PING data None
+2025-01-29 23:39:35,225 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Received packet PONG data 
+2025-01-29 23:40:00,226 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Sending packet PING data None
+2025-01-29 23:40:00,227 - INFO - [engineio.server] dqMgbkCnBty7l9CdAAAC: Received packet PONG data 

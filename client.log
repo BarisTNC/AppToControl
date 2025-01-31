@@ -1,0 +1,316 @@
+2025-01-29 23:10:31,166 - INFO - Sunucuya baðlanýlýyor... Deneme 1/5
+2025-01-29 23:10:31,167 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4
+2025-01-29 23:10:31,198 - INFO - Polling connection accepted with {'sid': 'nAjAty4_Y-bvLmwTAAAC', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000, 'maxPayload': 1000000}
+2025-01-29 23:10:31,198 - INFO - Engine.IO connection established
+2025-01-29 23:10:31,199 - INFO - Sending packet MESSAGE data 0{}
+2025-01-29 23:10:31,199 - INFO - Attempting WebSocket upgrade to ws://127.0.0.1:5000/socket.io/?transport=websocket&EIO=4
+2025-01-29 23:10:31,205 - INFO - WebSocket upgrade was successful
+2025-01-29 23:10:31,207 - INFO - Received packet NOOP data 
+2025-01-29 23:10:31,210 - INFO - Received packet MESSAGE data 2["connected",{"message":"Connected to server!","client_id":"RUIuoELFpKYoNGevAAAD","available_commands":{"shutdown":"Sistemi kapat\u0131r","restart":"Sistemi yeniden ba\u015flat\u0131r","sleep":"Uyku moduna al\u0131r","volumeup":"Ses seviyesini art\u0131r\u0131r","volumedown":"Ses seviyesini azalt\u0131r","mute":"Sesi kapat\u0131r"}}]
+2025-01-29 23:10:31,211 - INFO - Received event "connected" [/]
+2025-01-29 23:10:31,211 - INFO - Received packet MESSAGE data 0{"sid":"RUIuoELFpKYoNGevAAAD"}
+2025-01-29 23:10:31,215 - INFO - Namespace / is connected
+2025-01-29 23:10:31,215 - INFO - Baðlantý baþarýlý!
+2025-01-29 23:10:31,216 - INFO - Sunucuya baðlantý baþarýlý!
+2025-01-29 23:10:31,216 - INFO - Ýstemci çalýþýyor ve komut bekliyor...
+2025-01-29 23:10:56,197 - INFO - Received packet PING data 
+2025-01-29 23:10:56,197 - INFO - Sending packet PONG data 
+2025-01-29 23:11:03,747 - INFO - Unexpected error receiving packet: "[WinError 10054] Varolan bir baðlantý uzaktaki bir ana bilgisayar tarafýndan zorla kapatýldý", aborting
+2025-01-29 23:11:03,748 - INFO - Waiting for write loop task to end
+2025-01-29 23:11:03,748 - INFO - Exiting write loop task
+2025-01-29 23:11:03,748 - INFO - Engine.IO connection dropped
+2025-01-29 23:11:03,749 - WARNING - Sunucu baðlantýsý kesildi!
+2025-01-29 23:11:03,749 - INFO - Exiting read loop task
+2025-01-29 23:11:03,749 - INFO - Connection failed, new attempt in 1.22 seconds
+2025-01-29 23:11:04,976 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4
+2025-01-29 23:11:07,019 - INFO - HTTP GET request to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4&t=1738181464.976125 failed with error HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /socket.io/?transport=polling&EIO=4&t=1738181464.976125 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000020B6372BA50>: Failed to establish a new connection: [WinError 10061] Hedef makine etkin olarak reddettiðinden baðlantý kurulamadý')).
+2025-01-29 23:11:07,019 - INFO - Connection failed, new attempt in 2.37 seconds
+2025-01-29 23:11:09,399 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4
+2025-01-29 23:11:11,440 - INFO - HTTP GET request to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4&t=1738181469.399359 failed with error HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /socket.io/?transport=polling&EIO=4&t=1738181469.399359 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000020B63736C50>: Failed to establish a new connection: [WinError 10061] Hedef makine etkin olarak reddettiðinden baðlantý kurulamadý')).
+2025-01-29 23:11:11,440 - INFO - Connection failed, new attempt in 3.93 seconds
+2025-01-29 23:11:15,380 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4
+2025-01-29 23:11:17,422 - INFO - HTTP GET request to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4&t=1738181475.380997 failed with error HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /socket.io/?transport=polling&EIO=4&t=1738181475.380997 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000020B63740190>: Failed to establish a new connection: [WinError 10061] Hedef makine etkin olarak reddettiðinden baðlantý kurulamadý')).
+2025-01-29 23:11:17,422 - INFO - Connection failed, new attempt in 4.95 seconds
+2025-01-29 23:11:22,374 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4
+2025-01-29 23:11:24,425 - INFO - HTTP GET request to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4&t=1738181482.374432 failed with error HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /socket.io/?transport=polling&EIO=4&t=1738181482.374432 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000020B63737050>: Failed to establish a new connection: [WinError 10061] Hedef makine etkin olarak reddettiðinden baðlantý kurulamadý')).
+2025-01-29 23:11:24,425 - INFO - Connection failed, new attempt in 5.28 seconds
+2025-01-29 23:11:29,720 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4
+2025-01-29 23:11:31,763 - INFO - HTTP GET request to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4&t=1738181489.720461 failed with error HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /socket.io/?transport=polling&EIO=4&t=1738181489.720461 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000020B637406D0>: Failed to establish a new connection: [WinError 10061] Hedef makine etkin olarak reddettiðinden baðlantý kurulamadý')).
+2025-01-29 23:11:31,763 - INFO - Connection failed, new attempt in 4.92 seconds
+2025-01-29 23:11:36,686 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4
+2025-01-29 23:11:38,729 - INFO - HTTP GET request to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4&t=1738181496.6869607 failed with error HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /socket.io/?transport=polling&EIO=4&t=1738181496.6869607 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000020B637418D0>: Failed to establish a new connection: [WinError 10061] Hedef makine etkin olarak reddettiðinden baðlantý kurulamadý')).
+2025-01-29 23:11:38,730 - INFO - Connection failed, new attempt in 5.36 seconds
+2025-01-29 23:11:44,093 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4
+2025-01-29 23:11:46,143 - INFO - HTTP GET request to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4&t=1738181504.0942442 failed with error HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /socket.io/?transport=polling&EIO=4&t=1738181504.0942442 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000020B637429D0>: Failed to establish a new connection: [WinError 10061] Hedef makine etkin olarak reddettiðinden baðlantý kurulamadý')).
+2025-01-29 23:11:46,143 - INFO - Connection failed, new attempt in 4.97 seconds
+2025-01-29 23:11:51,118 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4
+2025-01-29 23:11:53,172 - INFO - HTTP GET request to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4&t=1738181511.1186123 failed with error HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /socket.io/?transport=polling&EIO=4&t=1738181511.1186123 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000020B63743A90>: Failed to establish a new connection: [WinError 10061] Hedef makine etkin olarak reddettiðinden baðlantý kurulamadý')).
+2025-01-29 23:11:53,172 - INFO - Connection failed, new attempt in 4.56 seconds
+2025-01-29 23:11:57,742 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4
+2025-01-29 23:11:59,790 - INFO - HTTP GET request to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4&t=1738181517.742103 failed with error HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /socket.io/?transport=polling&EIO=4&t=1738181517.742103 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000020B63748B90>: Failed to establish a new connection: [WinError 10061] Hedef makine etkin olarak reddettiðinden baðlantý kurulamadý')).
+2025-01-29 23:11:59,791 - INFO - Connection failed, new attempt in 5.02 seconds
+2025-01-29 23:12:04,821 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4
+2025-01-29 23:12:06,869 - INFO - HTTP GET request to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4&t=1738181524.821584 failed with error HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /socket.io/?transport=polling&EIO=4&t=1738181524.821584 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000020B63749C90>: Failed to establish a new connection: [WinError 10061] Hedef makine etkin olarak reddettiðinden baðlantý kurulamadý')).
+2025-01-29 23:12:06,870 - INFO - Connection failed, new attempt in 4.94 seconds
+2025-01-29 23:12:11,818 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4
+2025-01-29 23:12:13,870 - INFO - HTTP GET request to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4&t=1738181531.8188043 failed with error HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /socket.io/?transport=polling&EIO=4&t=1738181531.8188043 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000020B6374AD50>: Failed to establish a new connection: [WinError 10061] Hedef makine etkin olarak reddettiðinden baðlantý kurulamadý')).
+2025-01-29 23:12:13,870 - INFO - Connection failed, new attempt in 4.77 seconds
+2025-01-29 23:12:18,653 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4
+2025-01-29 23:12:20,696 - INFO - HTTP GET request to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4&t=1738181538.6533823 failed with error HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /socket.io/?transport=polling&EIO=4&t=1738181538.6533823 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000020B6374BE10>: Failed to establish a new connection: [WinError 10061] Hedef makine etkin olarak reddettiðinden baðlantý kurulamadý')).
+2025-01-29 23:12:20,696 - INFO - Connection failed, new attempt in 5.11 seconds
+2025-01-29 23:12:25,815 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4
+2025-01-29 23:12:27,860 - INFO - HTTP GET request to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4&t=1738181545.8154545 failed with error HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /socket.io/?transport=polling&EIO=4&t=1738181545.8154545 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000020B63760F10>: Failed to establish a new connection: [WinError 10061] Hedef makine etkin olarak reddettiðinden baðlantý kurulamadý')).
+2025-01-29 23:12:27,860 - INFO - Connection failed, new attempt in 4.98 seconds
+2025-01-29 23:12:32,855 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4
+2025-01-29 23:12:34,901 - INFO - HTTP GET request to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4&t=1738181552.855524 failed with error HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /socket.io/?transport=polling&EIO=4&t=1738181552.855524 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000020B6374B410>: Failed to establish a new connection: [WinError 10061] Hedef makine etkin olarak reddettiðinden baðlantý kurulamadý')).
+2025-01-29 23:12:34,901 - INFO - Connection failed, new attempt in 5.34 seconds
+2025-01-29 23:12:40,242 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4
+2025-01-29 23:12:42,267 - INFO - HTTP GET request to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4&t=1738181560.242336 failed with error HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /socket.io/?transport=polling&EIO=4&t=1738181560.242336 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000020B6374ADD0>: Failed to establish a new connection: [WinError 10061] Hedef makine etkin olarak reddettiðinden baðlantý kurulamadý')).
+2025-01-29 23:12:42,268 - INFO - Connection failed, new attempt in 4.60 seconds
+2025-01-29 23:12:46,866 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4
+2025-01-29 23:12:48,908 - INFO - HTTP GET request to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4&t=1738181566.8661442 failed with error HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /socket.io/?transport=polling&EIO=4&t=1738181566.8661442 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000020B63749D10>: Failed to establish a new connection: [WinError 10061] Hedef makine etkin olarak reddettiðinden baðlantý kurulamadý')).
+2025-01-29 23:12:48,909 - INFO - Connection failed, new attempt in 4.72 seconds
+2025-01-29 23:12:53,637 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4
+2025-01-29 23:12:55,679 - INFO - HTTP GET request to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4&t=1738181573.6377163 failed with error HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /socket.io/?transport=polling&EIO=4&t=1738181573.6377163 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000020B63743F90>: Failed to establish a new connection: [WinError 10061] Hedef makine etkin olarak reddettiðinden baðlantý kurulamadý')).
+2025-01-29 23:12:55,679 - INFO - Connection failed, new attempt in 5.41 seconds
+2025-01-29 23:13:01,091 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4
+2025-01-29 23:13:03,137 - INFO - HTTP GET request to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4&t=1738181581.0918853 failed with error HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /socket.io/?transport=polling&EIO=4&t=1738181581.0918853 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000020B63742290>: Failed to establish a new connection: [WinError 10061] Hedef makine etkin olarak reddettiðinden baðlantý kurulamadý')).
+2025-01-29 23:13:03,138 - INFO - Connection failed, new attempt in 4.73 seconds
+2025-01-29 23:13:07,875 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4
+2025-01-29 23:13:09,920 - INFO - HTTP GET request to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4&t=1738181587.875137 failed with error HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /socket.io/?transport=polling&EIO=4&t=1738181587.875137 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000020B63740D90>: Failed to establish a new connection: [WinError 10061] Hedef makine etkin olarak reddettiðinden baðlantý kurulamadý')).
+2025-01-29 23:13:09,920 - INFO - Connection failed, new attempt in 4.81 seconds
+2025-01-29 23:13:14,745 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4
+2025-01-29 23:13:14,764 - INFO - Polling connection accepted with {'sid': 'grgZZJPhRELnLbKqAAAA', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000, 'maxPayload': 1000000}
+2025-01-29 23:13:14,764 - INFO - Engine.IO connection established
+2025-01-29 23:13:14,765 - INFO - Sending packet MESSAGE data 0{}
+2025-01-29 23:13:14,765 - INFO - Attempting WebSocket upgrade to ws://127.0.0.1:5000/socket.io/?transport=websocket&EIO=4
+2025-01-29 23:13:14,770 - INFO - WebSocket upgrade was successful
+2025-01-29 23:13:14,772 - INFO - Received packet NOOP data 
+2025-01-29 23:13:14,775 - INFO - Received packet MESSAGE data 2["connected",{"message":"Connected to server!","client_id":"KNuU6eV-qb0GZyrsAAAB","available_commands":{"shutdown":"Sistemi kapat\u0131r","restart":"Sistemi yeniden ba\u015flat\u0131r","sleep":"Uyku moduna al\u0131r","volumeup":"Ses seviyesini art\u0131r\u0131r","volumedown":"Ses seviyesini azalt\u0131r","mute":"Sesi kapat\u0131r"}}]
+2025-01-29 23:13:14,777 - INFO - Received event "connected" [/]
+2025-01-29 23:13:14,778 - INFO - Received packet MESSAGE data 0{"sid":"KNuU6eV-qb0GZyrsAAAB"}
+2025-01-29 23:13:14,778 - INFO - Namespace / is connected
+2025-01-29 23:13:14,779 - INFO - Baðlantý baþarýlý!
+2025-01-29 23:13:14,779 - INFO - Reconnection successful
+2025-01-29 23:13:39,763 - INFO - Received packet PING data 
+2025-01-29 23:13:39,763 - INFO - Sending packet PONG data 
+2025-01-29 23:13:51,647 - INFO - Unexpected error receiving packet: "[WinError 10054] Varolan bir baðlantý uzaktaki bir ana bilgisayar tarafýndan zorla kapatýldý", aborting
+2025-01-29 23:13:51,648 - INFO - Waiting for write loop task to end
+2025-01-29 23:13:51,648 - INFO - Exiting write loop task
+2025-01-29 23:13:51,649 - INFO - Engine.IO connection dropped
+2025-01-29 23:13:51,649 - WARNING - Sunucu baðlantýsý kesildi!
+2025-01-29 23:13:51,650 - INFO - Exiting read loop task
+2025-01-29 23:13:51,650 - INFO - Connection failed, new attempt in 0.60 seconds
+2025-01-29 23:13:52,266 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4
+2025-01-29 23:13:52,786 - INFO - Polling connection accepted with {'sid': 'Iy5dLrsg9ZdHF0v2AAAC', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000, 'maxPayload': 1000000}
+2025-01-29 23:13:52,787 - INFO - Engine.IO connection established
+2025-01-29 23:13:52,787 - INFO - Sending packet MESSAGE data 0{}
+2025-01-29 23:13:52,788 - INFO - Attempting WebSocket upgrade to ws://127.0.0.1:5000/socket.io/?transport=websocket&EIO=4
+2025-01-29 23:13:52,797 - INFO - WebSocket upgrade was successful
+2025-01-29 23:13:52,802 - INFO - Received packet NOOP data 
+2025-01-29 23:13:52,809 - INFO - Received packet MESSAGE data 2["connected",{"message":"Connected to server!","client_id":"mp5i-ReVi-ZrPJPiAAAD","available_commands":{"shutdown":"Sistemi kapat\u0131r","restart":"Sistemi yeniden ba\u015flat\u0131r","sleep":"Uyku moduna al\u0131r","volumeup":"Ses seviyesini art\u0131r\u0131r","volumedown":"Ses seviyesini azalt\u0131r","mute":"Sesi kapat\u0131r"}}]
+2025-01-29 23:13:52,810 - INFO - Received event "connected" [/]
+2025-01-29 23:13:52,810 - INFO - Received packet MESSAGE data 0{"sid":"mp5i-ReVi-ZrPJPiAAAD"}
+2025-01-29 23:13:52,812 - INFO - Namespace / is connected
+2025-01-29 23:13:52,813 - INFO - Baðlantý baþarýlý!
+2025-01-29 23:13:52,813 - INFO - Reconnection successful
+2025-01-29 23:13:54,585 - INFO - Sunucuya baðlanýlýyor... Deneme 1/5
+2025-01-29 23:13:54,585 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4
+2025-01-29 23:13:54,592 - INFO - Polling connection accepted with {'sid': '9si9A4yJXoC82z2_AAAE', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000, 'maxPayload': 1000000}
+2025-01-29 23:13:54,593 - INFO - Engine.IO connection established
+2025-01-29 23:13:54,594 - INFO - Sending packet MESSAGE data 0{}
+2025-01-29 23:13:54,594 - INFO - Attempting WebSocket upgrade to ws://127.0.0.1:5000/socket.io/?transport=websocket&EIO=4
+2025-01-29 23:13:54,601 - INFO - WebSocket upgrade was successful
+2025-01-29 23:13:54,606 - INFO - Received packet NOOP data 
+2025-01-29 23:13:54,613 - INFO - Received packet MESSAGE data 2["connected",{"message":"Connected to server!","client_id":"z0YTx--AWLUuLQmRAAAF","available_commands":{"shutdown":"Sistemi kapat\u0131r","restart":"Sistemi yeniden ba\u015flat\u0131r","sleep":"Uyku moduna al\u0131r","volumeup":"Ses seviyesini art\u0131r\u0131r","volumedown":"Ses seviyesini azalt\u0131r","mute":"Sesi kapat\u0131r"}}]
+2025-01-29 23:13:54,618 - INFO - Received event "connected" [/]
+2025-01-29 23:13:54,619 - INFO - Received packet MESSAGE data 0{"sid":"z0YTx--AWLUuLQmRAAAF"}
+2025-01-29 23:13:54,623 - INFO - Namespace / is connected
+2025-01-29 23:13:54,624 - INFO - Baðlantý baþarýlý!
+2025-01-29 23:13:54,624 - INFO - Sunucuya baðlantý baþarýlý!
+2025-01-29 23:13:54,624 - INFO - Ýstemci çalýþýyor ve komut bekliyor...
+2025-01-29 23:14:19,591 - INFO - Received packet PING data 
+2025-01-29 23:14:19,591 - INFO - Sending packet PONG data 
+2025-01-29 23:14:44,593 - INFO - Received packet PING data 
+2025-01-29 23:14:44,593 - INFO - Sending packet PONG data 
+2025-01-29 23:15:09,595 - INFO - Received packet PING data 
+2025-01-29 23:15:09,595 - INFO - Sending packet PONG data 
+2025-01-29 23:15:34,598 - INFO - Received packet PING data 
+2025-01-29 23:15:34,598 - INFO - Sending packet PONG data 
+2025-01-29 23:15:59,600 - INFO - Received packet PING data 
+2025-01-29 23:15:59,600 - INFO - Sending packet PONG data 
+2025-01-29 23:16:24,602 - INFO - Received packet PING data 
+2025-01-29 23:16:24,602 - INFO - Sending packet PONG data 
+2025-01-29 23:16:49,604 - INFO - Received packet PING data 
+2025-01-29 23:16:49,604 - INFO - Sending packet PONG data 
+2025-01-29 23:16:55,044 - INFO - Unexpected error receiving packet: "[WinError 10054] Varolan bir baðlantý uzaktaki bir ana bilgisayar tarafýndan zorla kapatýldý", aborting
+2025-01-29 23:16:55,045 - INFO - Waiting for write loop task to end
+2025-01-29 23:16:55,045 - INFO - Exiting write loop task
+2025-01-29 23:16:55,046 - INFO - Engine.IO connection dropped
+2025-01-29 23:16:55,046 - WARNING - Sunucu baðlantýsý kesildi!
+2025-01-29 23:16:55,047 - INFO - Exiting read loop task
+2025-01-29 23:16:55,047 - INFO - Connection failed, new attempt in 1.18 seconds
+2025-01-29 23:16:56,240 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4
+2025-01-29 23:16:57,780 - INFO - Polling connection accepted with {'sid': 'fOMVKXC7-2KKK-iZAAAC', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000, 'maxPayload': 1000000}
+2025-01-29 23:16:57,781 - INFO - Engine.IO connection established
+2025-01-29 23:16:57,781 - INFO - Sending packet MESSAGE data 0{}
+2025-01-29 23:16:57,781 - INFO - Attempting WebSocket upgrade to ws://127.0.0.1:5000/socket.io/?transport=websocket&EIO=4
+2025-01-29 23:16:57,786 - INFO - WebSocket upgrade was successful
+2025-01-29 23:16:57,787 - INFO - Received packet NOOP data 
+2025-01-29 23:16:57,790 - INFO - Received packet MESSAGE data 2["connected",{"message":"Connected to server!","client_id":"pWdXBA5Rz77L3RTdAAAD","available_commands":{"shutdown":"Sistemi kapat\u0131r","restart":"Sistemi yeniden ba\u015flat\u0131r","sleep":"Uyku moduna al\u0131r","volumeup":"Ses seviyesini art\u0131r\u0131r","volumedown":"Ses seviyesini azalt\u0131r","mute":"Sesi kapat\u0131r"}}]
+2025-01-29 23:16:57,790 - INFO - Received event "connected" [/]
+2025-01-29 23:16:57,791 - INFO - Received packet MESSAGE data 0{"sid":"pWdXBA5Rz77L3RTdAAAD"}
+2025-01-29 23:16:57,791 - INFO - Namespace / is connected
+2025-01-29 23:16:57,791 - INFO - Baðlantý baþarýlý!
+2025-01-29 23:16:57,792 - INFO - Reconnection successful
+2025-01-29 23:17:22,780 - INFO - Received packet PING data 
+2025-01-29 23:17:22,780 - INFO - Sending packet PONG data 
+2025-01-29 23:17:47,782 - INFO - Received packet PING data 
+2025-01-29 23:17:47,783 - INFO - Sending packet PONG data 
+2025-01-29 23:18:12,785 - INFO - Received packet PING data 
+2025-01-29 23:18:12,785 - INFO - Sending packet PONG data 
+2025-01-29 23:18:37,787 - INFO - Received packet PING data 
+2025-01-29 23:18:37,787 - INFO - Sending packet PONG data 
+2025-01-29 23:19:02,790 - INFO - Received packet PING data 
+2025-01-29 23:19:02,790 - INFO - Sending packet PONG data 
+2025-01-29 23:19:27,792 - INFO - Received packet PING data 
+2025-01-29 23:19:27,793 - INFO - Sending packet PONG data 
+2025-01-29 23:19:52,794 - INFO - Received packet PING data 
+2025-01-29 23:19:52,794 - INFO - Sending packet PONG data 
+2025-01-29 23:20:17,796 - INFO - Received packet PING data 
+2025-01-29 23:20:17,797 - INFO - Sending packet PONG data 
+2025-01-29 23:20:42,798 - INFO - Received packet PING data 
+2025-01-29 23:20:42,798 - INFO - Sending packet PONG data 
+2025-01-29 23:21:07,800 - INFO - Received packet PING data 
+2025-01-29 23:21:07,800 - INFO - Sending packet PONG data 
+2025-01-29 23:21:32,802 - INFO - Received packet PING data 
+2025-01-29 23:21:32,802 - INFO - Sending packet PONG data 
+2025-01-29 23:21:57,805 - INFO - Received packet PING data 
+2025-01-29 23:21:57,805 - INFO - Sending packet PONG data 
+2025-01-29 23:22:22,807 - INFO - Received packet PING data 
+2025-01-29 23:22:22,807 - INFO - Sending packet PONG data 
+2025-01-29 23:22:47,809 - INFO - Received packet PING data 
+2025-01-29 23:22:47,809 - INFO - Sending packet PONG data 
+2025-01-29 23:23:12,811 - INFO - Received packet PING data 
+2025-01-29 23:23:12,812 - INFO - Sending packet PONG data 
+2025-01-29 23:23:37,814 - INFO - Received packet PING data 
+2025-01-29 23:23:37,814 - INFO - Sending packet PONG data 
+2025-01-29 23:24:02,816 - INFO - Received packet PING data 
+2025-01-29 23:24:02,817 - INFO - Sending packet PONG data 
+2025-01-29 23:24:27,818 - INFO - Received packet PING data 
+2025-01-29 23:24:27,818 - INFO - Sending packet PONG data 
+2025-01-29 23:24:52,820 - INFO - Received packet PING data 
+2025-01-29 23:24:52,820 - INFO - Sending packet PONG data 
+2025-01-29 23:25:17,823 - INFO - Received packet PING data 
+2025-01-29 23:25:17,823 - INFO - Sending packet PONG data 
+2025-01-29 23:25:42,825 - INFO - Received packet PING data 
+2025-01-29 23:25:42,825 - INFO - Sending packet PONG data 
+2025-01-29 23:25:46,245 - INFO - Unexpected error receiving packet: "[WinError 10054] Varolan bir baðlantý uzaktaki bir ana bilgisayar tarafýndan zorla kapatýldý", aborting
+2025-01-29 23:25:46,247 - INFO - Waiting for write loop task to end
+2025-01-29 23:25:46,247 - INFO - Exiting write loop task
+2025-01-29 23:25:46,247 - INFO - Engine.IO connection dropped
+2025-01-29 23:25:46,248 - WARNING - Sunucu baðlantýsý kesildi!
+2025-01-29 23:25:46,249 - INFO - Exiting read loop task
+2025-01-29 23:25:46,249 - INFO - Connection failed, new attempt in 0.66 seconds
+2025-01-29 23:25:46,916 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4
+2025-01-29 23:25:48,959 - INFO - HTTP GET request to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4&t=1738182346.916686 failed with error HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /socket.io/?transport=polling&EIO=4&t=1738182346.916686 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000233615DB910>: Failed to establish a new connection: [WinError 10061] Hedef makine etkin olarak reddettiðinden baðlantý kurulamadý')).
+2025-01-29 23:25:48,959 - INFO - Connection failed, new attempt in 1.59 seconds
+2025-01-29 23:25:50,559 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4
+2025-01-29 23:25:52,600 - INFO - HTTP GET request to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4&t=1738182350.5597107 failed with error HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /socket.io/?transport=polling&EIO=4&t=1738182350.5597107 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000233615E9450>: Failed to establish a new connection: [WinError 10061] Hedef makine etkin olarak reddettiðinden baðlantý kurulamadý')).
+2025-01-29 23:25:52,600 - INFO - Connection failed, new attempt in 3.83 seconds
+2025-01-29 23:25:56,439 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4
+2025-01-29 23:25:57,978 - INFO - Polling connection accepted with {'sid': 'OF7gEMMdv_RTe6ydAAAC', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000, 'maxPayload': 1000000}
+2025-01-29 23:25:57,978 - INFO - Engine.IO connection established
+2025-01-29 23:25:57,979 - INFO - Sending packet MESSAGE data 0{}
+2025-01-29 23:25:57,979 - INFO - Attempting WebSocket upgrade to ws://127.0.0.1:5000/socket.io/?transport=websocket&EIO=4
+2025-01-29 23:25:57,995 - INFO - WebSocket upgrade was successful
+2025-01-29 23:25:57,996 - INFO - Received packet NOOP data 
+2025-01-29 23:25:57,998 - INFO - Received packet MESSAGE data 2["connected",{"message":"Connected to server!","client_id":"mOOwJTYOwK5RgP1eAAAD","available_commands":{"shutdown":"Sistemi kapat\u0131r","restart":"Sistemi yeniden ba\u015flat\u0131r","sleep":"Uyku moduna al\u0131r","volumeup":"Ses seviyesini art\u0131r\u0131r","volumedown":"Ses seviyesini azalt\u0131r","mute":"Sesi kapat\u0131r"}}]
+2025-01-29 23:25:57,999 - INFO - Received event "connected" [/]
+2025-01-29 23:25:57,999 - INFO - Received packet MESSAGE data 0{"sid":"mOOwJTYOwK5RgP1eAAAD"}
+2025-01-29 23:25:58,000 - INFO - Namespace / is connected
+2025-01-29 23:25:58,000 - INFO - Baðlantý baþarýlý!
+2025-01-29 23:25:58,000 - INFO - Reconnection successful
+2025-01-29 23:26:23,002 - INFO - Received packet PING data 
+2025-01-29 23:26:23,005 - INFO - Sending packet PONG data 
+2025-01-29 23:26:48,008 - INFO - Received packet PING data 
+2025-01-29 23:26:48,008 - INFO - Sending packet PONG data 
+2025-01-29 23:27:13,010 - INFO - Received packet PING data 
+2025-01-29 23:27:13,010 - INFO - Sending packet PONG data 
+2025-01-29 23:27:38,013 - INFO - Received packet PING data 
+2025-01-29 23:27:38,013 - INFO - Sending packet PONG data 
+2025-01-29 23:28:03,015 - INFO - Received packet PING data 
+2025-01-29 23:28:03,015 - INFO - Sending packet PONG data 
+2025-01-29 23:28:28,017 - INFO - Received packet PING data 
+2025-01-29 23:28:28,017 - INFO - Sending packet PONG data 
+2025-01-29 23:28:53,019 - INFO - Received packet PING data 
+2025-01-29 23:28:53,019 - INFO - Sending packet PONG data 
+2025-01-29 23:29:02,207 - INFO - Unexpected error receiving packet: "[WinError 10054] Varolan bir baðlantý uzaktaki bir ana bilgisayar tarafýndan zorla kapatýldý", aborting
+2025-01-29 23:29:02,208 - INFO - Waiting for write loop task to end
+2025-01-29 23:29:02,208 - INFO - Exiting write loop task
+2025-01-29 23:29:02,208 - INFO - Engine.IO connection dropped
+2025-01-29 23:29:02,208 - WARNING - Sunucu baðlantýsý kesildi!
+2025-01-29 23:29:02,209 - INFO - Connection failed, new attempt in 0.62 seconds
+2025-01-29 23:29:02,209 - INFO - Exiting read loop task
+2025-01-29 23:29:02,835 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4
+2025-01-29 23:29:04,883 - INFO - HTTP GET request to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4&t=1738182542.8357966 failed with error HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /socket.io/?transport=polling&EIO=4&t=1738182542.8357966 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000233615E7FD0>: Failed to establish a new connection: [WinError 10061] Hedef makine etkin olarak reddettiðinden baðlantý kurulamadý')).
+2025-01-29 23:29:04,883 - INFO - Connection failed, new attempt in 1.98 seconds
+2025-01-29 23:29:06,878 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4
+2025-01-29 23:29:08,921 - INFO - HTTP GET request to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4&t=1738182546.8780432 failed with error HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /socket.io/?transport=polling&EIO=4&t=1738182546.8780432 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000233615E8150>: Failed to establish a new connection: [WinError 10061] Hedef makine etkin olarak reddettiðinden baðlantý kurulamadý')).
+2025-01-29 23:29:08,922 - INFO - Connection failed, new attempt in 4.04 seconds
+2025-01-29 23:29:12,970 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4
+2025-01-29 23:29:15,027 - INFO - HTTP GET request to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4&t=1738182552.970879 failed with error HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /socket.io/?transport=polling&EIO=4&t=1738182552.970879 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000233615EB690>: Failed to establish a new connection: [WinError 10061] Hedef makine etkin olarak reddettiðinden baðlantý kurulamadý')).
+2025-01-29 23:29:15,027 - INFO - Connection failed, new attempt in 5.33 seconds
+2025-01-29 23:29:20,365 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4
+2025-01-29 23:29:22,412 - INFO - HTTP GET request to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4&t=1738182560.3654573 failed with error HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /socket.io/?transport=polling&EIO=4&t=1738182560.3654573 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000233615F4750>: Failed to establish a new connection: [WinError 10061] Hedef makine etkin olarak reddettiðinden baðlantý kurulamadý')).
+2025-01-29 23:29:22,412 - INFO - Connection failed, new attempt in 4.75 seconds
+2025-01-29 23:29:27,172 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4
+2025-01-29 23:29:29,217 - INFO - HTTP GET request to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4&t=1738182567.1727078 failed with error HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /socket.io/?transport=polling&EIO=4&t=1738182567.1727078 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000233615F5850>: Failed to establish a new connection: [WinError 10061] Hedef makine etkin olarak reddettiðinden baðlantý kurulamadý')).
+2025-01-29 23:29:29,217 - INFO - Connection failed, new attempt in 5.06 seconds
+2025-01-29 23:29:34,287 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4
+2025-01-29 23:29:36,320 - INFO - HTTP GET request to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4&t=1738182574.2870092 failed with error HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /socket.io/?transport=polling&EIO=4&t=1738182574.2870092 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000233615F68D0>: Failed to establish a new connection: [WinError 10061] Hedef makine etkin olarak reddettiðinden baðlantý kurulamadý')).
+2025-01-29 23:29:36,321 - INFO - Connection failed, new attempt in 4.84 seconds
+2025-01-29 23:29:41,166 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4
+2025-01-29 23:29:41,184 - INFO - Polling connection accepted with {'sid': 'OYfR7Ir0H-0HjgN8AAAA', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000, 'maxPayload': 1000000}
+2025-01-29 23:29:41,184 - INFO - Engine.IO connection established
+2025-01-29 23:29:41,185 - INFO - Sending packet MESSAGE data 0{}
+2025-01-29 23:29:41,185 - INFO - Attempting WebSocket upgrade to ws://127.0.0.1:5000/socket.io/?transport=websocket&EIO=4
+2025-01-29 23:29:41,188 - INFO - WebSocket upgrade was successful
+2025-01-29 23:29:41,189 - INFO - Received packet NOOP data 
+2025-01-29 23:29:41,191 - INFO - Received packet MESSAGE data 2["connected",{"message":"Connected to server!","client_id":"Rq2pE_bIcjlkFWQ0AAAB","available_commands":{"shutdown":"Sistemi kapat\u0131r","restart":"Sistemi yeniden ba\u015flat\u0131r","sleep":"Uyku moduna al\u0131r","volumeup":"Ses seviyesini art\u0131r\u0131r","volumedown":"Ses seviyesini azalt\u0131r","mute":"Sesi kapat\u0131r"}}]
+2025-01-29 23:29:41,192 - INFO - Received event "connected" [/]
+2025-01-29 23:29:41,192 - INFO - Received packet MESSAGE data 0{"sid":"Rq2pE_bIcjlkFWQ0AAAB"}
+2025-01-29 23:29:41,193 - INFO - Namespace / is connected
+2025-01-29 23:29:41,193 - INFO - Baðlantý baþarýlý!
+2025-01-29 23:29:41,193 - INFO - Reconnection successful
+2025-01-29 23:30:06,184 - INFO - Received packet PING data 
+2025-01-29 23:30:06,184 - INFO - Sending packet PONG data 
+2025-01-29 23:30:31,185 - INFO - Received packet PING data 
+2025-01-29 23:30:31,185 - INFO - Sending packet PONG data 
+2025-01-29 23:30:56,188 - INFO - Received packet PING data 
+2025-01-29 23:30:56,189 - INFO - Sending packet PONG data 
+2025-01-29 23:31:21,190 - INFO - Received packet PING data 
+2025-01-29 23:31:21,191 - INFO - Sending packet PONG data 
+2025-01-29 23:31:46,192 - INFO - Received packet PING data 
+2025-01-29 23:31:46,192 - INFO - Sending packet PONG data 
+2025-01-29 23:40:45,806 - INFO - Sunucuya baðlanýlýyor... Deneme 1/5
+2025-01-29 23:40:45,806 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4
+2025-01-29 23:40:45,822 - ERROR - Baðlantý hatasý: Unexpected status code 404 in server response
+2025-01-29 23:40:45,822 - INFO - 5 saniye sonra tekrar denenecek...
+2025-01-29 23:40:50,822 - INFO - Sunucuya baðlanýlýyor... Deneme 2/5
+2025-01-29 23:40:50,822 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4
+2025-01-29 23:40:50,826 - ERROR - Baðlantý hatasý: Unexpected status code 404 in server response
+2025-01-29 23:40:50,826 - INFO - 5 saniye sonra tekrar denenecek...
+2025-01-29 23:40:55,827 - INFO - Sunucuya baðlanýlýyor... Deneme 3/5
+2025-01-29 23:40:55,827 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4
+2025-01-29 23:40:55,830 - ERROR - Baðlantý hatasý: Unexpected status code 404 in server response
+2025-01-29 23:40:55,830 - INFO - 5 saniye sonra tekrar denenecek...
+2025-01-29 23:41:00,831 - INFO - Sunucuya baðlanýlýyor... Deneme 4/5
+2025-01-29 23:41:00,831 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4
+2025-01-29 23:41:00,835 - ERROR - Baðlantý hatasý: Unexpected status code 404 in server response
+2025-01-29 23:41:00,835 - INFO - 5 saniye sonra tekrar denenecek...
+2025-01-29 23:41:05,836 - INFO - Sunucuya baðlanýlýyor... Deneme 5/5
+2025-01-29 23:41:05,836 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?transport=polling&EIO=4
+2025-01-29 23:41:05,839 - ERROR - Baðlantý hatasý: Unexpected status code 404 in server response
+2025-01-29 23:41:05,839 - ERROR - Maksimum baðlantý deneme sayýsýna ulaþýldý!
+2025-01-29 23:41:05,839 - ERROR - Sunucuya baðlanýlamadý, program sonlandýrýlýyor.
