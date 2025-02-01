@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remote Control Panel</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div id="auth-container" class="container mx-auto px-4 py-8">
+        <!-- Login/Register Forms -->
+        <div class="max-w-md mx-auto bg-white rounded-lg shadow-lg p-6 mb-8">
+            <div class="flex justify-center mb-6">
+                <button id="loginTab" class="px-4 py-2 text-blue-600 border-b-2 border-blue-600">Giriş</button>
+                <button id="registerTab" class="px-4 py-2 text-gray-500">Kayıt</button>
+            </div>
+
+            <form id="loginForm" class="space-y-4">
+                <div>
+                    <label class="block text-gray-700">Kullanıcı Adı</label>
+                    <input type="text" id="loginUsername" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500">
+                </div>
+                <div>
+                    <label class="block text-gray-700">Şifre</label>
+                    <input type="password" id="loginPassword" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500">
+                </div>
+                <button type="submit" class="w-full py-2 px-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+                    Giriş Yap
+                </button>
+            </form>
+
+            <form id="registerForm" class="hidden space-y-4">
+                <div>
+                    <label class="block text-gray-700">Kullanıcı Adı</label>
+                    <input type="text" id="registerUsername" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500">
+                </div>
+                <div>
+                    <label class="block text-gray-700">Şifre</label>
+                    <input type="password" id="registerPassword" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500">
+                </div>
+                <button type="submit" class="w-full py-2 px-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+                    Kayıt Ol
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div id="control-panel" class="hidden container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- İstemci Listesi -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h2 class="text-xl font-bold mb-4">Bağlı İstemciler</h2>
+                <div id="clientList" class="space-y-2">
+                    <!-- İstemciler buraya dinamik olarak eklenecek -->
+                </div>
+            </div>
+
+            <!-- Komut Paneli -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h2 class="text-xl font-bold mb-4">Komut Paneli</h2>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-gray-700">Seçili İstemci</label>
+                        <select id="clientSelect" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500">
+                            <option value="">İstemci Seçin</option>
+                        </select>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <button onclick="sendCommand('shutdown')" class="py-2 px-4 bg-red-600 text-white rounded-lg hover:bg-red-700">
+                            <i class="fas fa-power-off mr-2"></i>Kapat
+                        </button>
+                        <button onclick="sendCommand('restart')" class="py-2 px-4 bg-yellow-600 text-white rounded-lg hover:bg-yellow-700">
+                            <i class="fas fa-redo mr-2"></i>Yeniden Başlat
+                        </button>
+                        <button onclick="sendCommand('sleep')" class="py-2 px-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+                            <i class="fas fa-moon mr-2"></i>Uyku
+                        </button>
+                        <button onclick="sendCommand('screenshot')" class="py-2 px-4 bg-green-600 text-white rounded-lg hover:bg-green-700">
+                            <i class="fas fa-camera mr-2"></i>Ekran Görüntüsü
+                        </button>
+                        <button onclick="sendCommand('processes')" class="py-2 px-4 bg-purple-600 text-white rounded-lg hover:bg-purple-700">
+                            <i class="fas fa-list mr-2"></i>Süreçler
+                        </button>
+                        <button onclick="showTerminal()" class="py-2 px-4 bg-gray-600 text-white rounded-lg hover:bg-gray-700">
+                            <i class="fas fa-terminal mr-2"></i>Terminal
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Terminal Modal -->
+        <div id="terminalModal" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center">
+            <div class="bg-white rounded-lg shadow-lg p-6 w-full max-w-2xl">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-xl font-bold">Terminal</h3>
+                    <button onclick="hideTerminal()" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div id="terminalOutput" class="bg-black text-green-500 p-4 rounded-lg h-64 overflow-y-auto font-mono">
+                    <!-- Terminal çıktısı buraya gelecek -->
+                </div>
+                <div class="mt-4">
+                    <input type="text" id="terminalInput" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
+                           placeholder="Komut girin...">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_URL = "http://127.0.0.1:5000";
+        let currentApiKey = '';
+
+        // Sayfa yükleme
+        document.addEventListener('DOMContentLoaded', () => {
+            const token = localStorage.getItem('token');
+            if (token) {
+                currentApiKey = localStorage.getItem('apiKey');
+                showControlPanel();
+                updateClientList();
+            }
+        });
+
+        // Tab değiştirme
+        document.getElementById('loginTab').addEventListener('click', () => {
+            document.getElementById('loginForm').classList.remove('hidden');
+            document.getElementById('registerForm').classList.add('hidden');
+            document.getElementById('loginTab').classList.add('text-blue-600', 'border-b-2', 'border-blue-600');
+            document.getElementById('registerTab').classList.remove('text-blue-600', 'border-b-2', 'border-blue-600');
+        });
+
+        document.getElementById('registerTab').addEventListener('click', () => {
+            document.getElementById('registerForm').classList.remove('hidden');
+            document.getElementById('loginForm').classList.add('hidden');
+            document.getElementById('registerTab').classList.add('text-blue-600', 'border-b-2', 'border-blue-600');
+            document.getElementById('loginTab').classList.remove('text-blue-600', 'border-b-2', 'border-blue-600');
+        });
+
+        // Login form
+        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const username = document.getElementById('loginUsername').value;
+            const password = document.getElementById('loginPassword').value;
+
+            try {
+                const response = await fetch(`${API_URL}/login`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ username, password })
+                });
+
+                const data = await response.json();
+                if (data.status === 'success') {
+                    localStorage.setItem('token', data.token);
+                    localStorage.setItem('apiKey', data.api_key);
+                    currentApiKey = data.api_key;
+                    showControlPanel();
+                    updateClientList();
+                } else {
+                    alert(data.message);
+                }
+            } catch (error) {
+                alert('Giriş yapılırken hata oluştu');
+            }
+        });
+
+        // Register form
+        document.getElementById('registerForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const username = document.getElementById('registerUsername').value;
+            const password = document.getElementById('registerPassword').value;
+
+            try {
+                const response = await fetch(`${API_URL}/register`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ username, password })
+                });
+
+                const data = await response.json();
+                if (data.status === 'success') {
+                    alert(`Kayıt başarılı! API Key: ${data.api_key}`);
+                    document.getElementById('loginTab').click();
+                } else {
+                    alert(data.message);
+                }
+            } catch (error) {
+                alert('Kayıt olurken hata oluştu');
+            }
+        });
+
+        // İstemci listesini güncelle
+        async function updateClientList() {
+            try {
+                const response = await fetch(`${API_URL}/clients`, {
+                    headers: {
+                        'X-API-KEY': currentApiKey
+                    }
+                });
+
+                const data = await response.json();
+                if (data.status === 'success') {
+                    const clientList = document.getElementById('clientList');
+                    const clientSelect = document.getElementById('clientSelect');
+
+                    clientList.innerHTML = '';
+                    clientSelect.innerHTML = '<option value="">İstemci Seçin</option>';
+
+                    data.clients.forEach(client => {
+                        // Liste için
+                        const clientDiv = document.createElement('div');
+                        clientDiv.className = 'p-4 border rounded-lg hover:bg-gray-50';
+                        clientDiv.innerHTML = `
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <i class="fas fa-desktop mr-2"></i>
+                                    ${client}
+                                </div>
+                                <div class="text-green-500">
+                                    <i class="fas fa-circle"></i>
+                                </div>
+                            </div>
+                        `;
+                        clientList.appendChild(clientDiv);
+
+                        // Select için
+                        const option = document.createElement('option');
+                        option.value = client;
+                        option.textContent = client;
+                        clientSelect.appendChild(option);
+                    });
+                }
+            } catch (error) {
+                console.error('İstemci listesi güncellenirken hata:', error);
+            }
+        }
+
+        // Komut gönderme
+        async function sendCommand(command, params = {}) {
+            const clientId = document.getElementById('clientSelect').value;
+            if (!clientId) {
+                alert('Lütfen bir istemci seçin');
+                return;
+            }
+
+            try {
+                const response = await fetch(`${API_URL}/send-command`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-API-KEY': currentApiKey
+                    },
+                    body: JSON.stringify({
+                        client_id: clientId,
+                        command: command,
+                        params: params
+                    })
+                });
+
+                const data = await response.json();
+                if (data.status === 'success') {
+                    if (command === 'processes') {
+                        showProcessList(data.result);
+                    } else if (command === 'screenshot') {
+                        showScreenshot(data.result);
+                    }
+                } else {
+                    alert(data.message);
+                }
+            } catch (error) {
+                alert('Komut gönderilirken hata oluştu');
+            }
+        }
+
+        // Terminal işlevleri
+        function showTerminal() {
+            document.getElementById('terminalModal').classList.remove('hidden');
+            document.getElementById('terminalInput').focus();
+        }
+
+        function hideTerminal() {
+            document.getElementById('terminalModal').classList.add('hidden');
+        }
+
+        // Terminal input işleme
+        document.getElementById('terminalInput').addEventListener('keypress', async (e) => {
+            if (e.key === 'Enter') {
+                const command = e.target.value;
+                const terminalOutput = document.getElementById('terminalOutput');
+
+                terminalOutput.innerHTML += `<div class="mb-2">> ${command}</div>`;
+                e.target.value = '';
+
+                await sendCommand('exec', { command_str: command });
+            }
+        });
+
+        // Panel görünürlük kontrolü
+        function showControlPanel() {
+            document.getElementById('auth-container').classList.add('hidden');
+            document.getElementById('control-panel').classList.remove('hidden');
+        }
+
+        // İstemci listesi otomatik güncelleme
+        setInterval(updateClientList, 5000);
+
+        // Çıkış yapma
+        function logout() {
+            localStorage.removeItem('token');
+            localStorage.removeItem('apiKey');
+            currentApiKey = '';
+            document.getElementById('auth-container').classList.remove('hidden');
+            document.getElementById('control-panel').classList.add('hidden');
+        }
+
+        // Process listesi gösterme
+        function showProcessList(processes) {
+            const modal = document.createElement('div');
+            modal.className = 'fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center';
+            modal.innerHTML = `
+                <div class="bg-white rounded-lg shadow-lg p-6 w-full max-w-4xl">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-xl font-bold">Çalışan Süreçler</h3>
+                        <button onclick="this.closest('.fixed').remove()" class="text-gray-500 hover:text-gray-700">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full">
+                            <thead>
+                                <tr>
+                                    <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">PID</th>
+                                    <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">İsim</th>
+                                    <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">CPU %</th>
+                                    <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Bellek %</th>
+                                    <th class="px-6 py-3 bg-gray-50"></th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                ${processes.map(proc => `
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap">${proc.pid}</td>
+                                        <td class="px-6 py-4 whitespace-nowrap">${proc.name}</td>
+                                        <td class="px-6 py-4 whitespace-nowrap">${proc.cpu_percent.toFixed(1)}%</td>
+                                        <td class="px-6 py-4 whitespace-nowrap">${proc.memory_percent.toFixed(1)}%</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-right">
+                                            <button onclick="sendCommand('kill', {pid: ${proc.pid}})"
+                                                    class="text-red-600 hover:text-red-900">
+                                                <i class="fas fa-times"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                `).join('')}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(modal);
+        }
+
+        // Screenshot görüntüleme
+        function showScreenshot(result) {
+            const modal = document.createElement('div');
+            modal.className = 'fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center';
+            modal.innerHTML = `
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-xl font-bold">Ekran Görüntüsü</h3>
+                        <button onclick="this.closest('.fixed').remove()" class="text-gray-500 hover:text-gray-700">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <img src="/screenshots/${result.filename}" class="max-w-full" />
+                </div>
+            `;
+            document.body.appendChild(modal);
+        }
+    </script>
+</body>
+</html>

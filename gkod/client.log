@@ -1,0 +1,223 @@
+2025-02-01 02:08:44,915 - INFO - Sunucuya baðlanýlýyor... Deneme 1/5
+2025-02-01 02:08:44,916 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?client_id=5e8f39c9-e000-49a8-b440-e8b18bab531d&api_key=51623974-bcd0-4cb0-98c2-1395b9bddbea&transport=polling&EIO=4
+2025-02-01 02:08:44,922 - INFO - Polling connection accepted with {'sid': '_6c1flpbypDT0cb2AAAA', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000, 'maxPayload': 1000000}
+2025-02-01 02:08:44,923 - INFO - Engine.IO connection established
+2025-02-01 02:08:44,923 - INFO - Sending packet MESSAGE data 0{}
+2025-02-01 02:08:44,923 - INFO - Attempting WebSocket upgrade to ws://127.0.0.1:5000/socket.io/?client_id=5e8f39c9-e000-49a8-b440-e8b18bab531d&api_key=51623974-bcd0-4cb0-98c2-1395b9bddbea&transport=websocket&EIO=4
+2025-02-01 02:08:44,928 - INFO - WebSocket upgrade was successful
+2025-02-01 02:08:44,931 - INFO - Received packet NOOP data 
+2025-02-01 02:08:44,933 - INFO - Received packet MESSAGE data 0{"sid":"63_b-lEAnMgD84PhAAAB"}
+2025-02-01 02:08:44,934 - INFO - Namespace / is connected
+2025-02-01 02:08:44,935 - INFO - Baðlantý baþarýlý! Client ID: 5e8f39c9-e000-49a8-b440-e8b18bab531d
+2025-02-01 02:08:44,935 - INFO - Sunucuya baðlantý baþarýlý!
+2025-02-01 02:08:44,936 - INFO - Ýstemci çalýþýyor ve komut bekliyor...
+2025-02-01 02:09:09,922 - INFO - Received packet PING data 
+2025-02-01 02:09:09,922 - INFO - Sending packet PONG data 
+2025-02-01 02:09:34,924 - INFO - Received packet PING data 
+2025-02-01 02:09:34,924 - INFO - Sending packet PONG data 
+2025-02-01 02:09:59,926 - INFO - Received packet PING data 
+2025-02-01 02:09:59,926 - INFO - Sending packet PONG data 
+2025-02-01 02:10:24,927 - INFO - Received packet PING data 
+2025-02-01 02:10:24,927 - INFO - Sending packet PONG data 
+2025-02-01 02:10:49,930 - INFO - Received packet PING data 
+2025-02-01 02:10:49,930 - INFO - Sending packet PONG data 
+2025-02-01 02:11:14,932 - INFO - Received packet PING data 
+2025-02-01 02:11:14,932 - INFO - Sending packet PONG data 
+2025-02-01 02:11:39,934 - INFO - Received packet PING data 
+2025-02-01 02:11:39,934 - INFO - Sending packet PONG data 
+2025-02-01 02:12:04,935 - INFO - Received packet PING data 
+2025-02-01 02:12:04,935 - INFO - Sending packet PONG data 
+2025-02-01 02:12:29,937 - INFO - Received packet PING data 
+2025-02-01 02:12:29,937 - INFO - Sending packet PONG data 
+2025-02-01 02:12:54,939 - INFO - Received packet PING data 
+2025-02-01 02:12:54,940 - INFO - Sending packet PONG data 
+2025-02-01 02:13:19,941 - INFO - Received packet PING data 
+2025-02-01 02:13:19,941 - INFO - Sending packet PONG data 
+2025-02-01 02:13:44,943 - INFO - Received packet PING data 
+2025-02-01 02:13:44,943 - INFO - Sending packet PONG data 
+2025-02-01 02:14:09,945 - INFO - Received packet PING data 
+2025-02-01 02:14:09,945 - INFO - Sending packet PONG data 
+2025-02-01 02:14:34,947 - INFO - Received packet PING data 
+2025-02-01 02:14:34,947 - INFO - Sending packet PONG data 
+2025-02-01 02:14:59,949 - INFO - Received packet PING data 
+2025-02-01 02:14:59,949 - INFO - Sending packet PONG data 
+2025-02-01 02:15:24,951 - INFO - Received packet PING data 
+2025-02-01 02:15:24,951 - INFO - Sending packet PONG data 
+2025-02-01 02:15:49,953 - INFO - Received packet PING data 
+2025-02-01 02:15:49,954 - INFO - Sending packet PONG data 
+2025-02-01 02:16:14,955 - INFO - Received packet PING data 
+2025-02-01 02:16:14,955 - INFO - Sending packet PONG data 
+2025-02-01 02:16:39,957 - INFO - Received packet PING data 
+2025-02-01 02:16:39,957 - INFO - Sending packet PONG data 
+2025-02-01 02:17:04,959 - INFO - Received packet PING data 
+2025-02-01 02:17:04,959 - INFO - Sending packet PONG data 
+2025-02-01 02:17:29,961 - INFO - Received packet PING data 
+2025-02-01 02:17:29,961 - INFO - Sending packet PONG data 
+2025-02-01 02:17:54,963 - INFO - Received packet PING data 
+2025-02-01 02:17:54,963 - INFO - Sending packet PONG data 
+2025-02-01 02:18:19,965 - INFO - Received packet PING data 
+2025-02-01 02:18:19,965 - INFO - Sending packet PONG data 
+2025-02-01 02:18:44,967 - INFO - Received packet PING data 
+2025-02-01 02:18:44,967 - INFO - Sending packet PONG data 
+2025-02-01 02:19:09,969 - INFO - Received packet PING data 
+2025-02-01 02:19:09,969 - INFO - Sending packet PONG data 
+2025-02-01 02:19:34,971 - INFO - Received packet PING data 
+2025-02-01 02:19:34,971 - INFO - Sending packet PONG data 
+2025-02-01 02:19:59,974 - INFO - Received packet PING data 
+2025-02-01 02:19:59,974 - INFO - Sending packet PONG data 
+2025-02-01 02:20:16,928 - INFO - Unexpected error receiving packet: "[WinError 10054] Varolan bir baðlantý uzaktaki bir ana bilgisayar tarafýndan zorla kapatýldý", aborting
+2025-02-01 02:20:16,928 - INFO - Waiting for write loop task to end
+2025-02-01 02:20:16,928 - INFO - Exiting write loop task
+2025-02-01 02:20:16,929 - INFO - Engine.IO connection dropped
+2025-02-01 02:20:16,929 - WARNING - Sunucu baðlantýsý kesildi!
+2025-02-01 02:20:16,929 - INFO - Connection failed, new attempt in 1.32 seconds
+2025-02-01 02:20:16,929 - INFO - Exiting read loop task
+2025-02-01 02:20:18,247 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?client_id=5e8f39c9-e000-49a8-b440-e8b18bab531d&api_key=51623974-bcd0-4cb0-98c2-1395b9bddbea&transport=polling&EIO=4
+2025-02-01 02:21:45,931 - INFO - Sunucuya baðlanýlýyor... Deneme 1/5
+2025-02-01 02:21:45,932 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?client_id=a0516c0b-3d7b-44d4-a388-fe582b83b5fb&api_key=d4a9df15-498d-40fb-9011-c64ae35b47c3&transport=polling&EIO=4
+2025-02-01 02:21:45,954 - INFO - Polling connection accepted with {'sid': 'eBYuVaCjSs3MJZnXAAAA', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000, 'maxPayload': 1000000}
+2025-02-01 02:21:45,956 - INFO - Engine.IO connection established
+2025-02-01 02:21:45,956 - INFO - Sending packet MESSAGE data 0{}
+2025-02-01 02:21:45,956 - INFO - Attempting WebSocket upgrade to ws://127.0.0.1:5000/socket.io/?client_id=a0516c0b-3d7b-44d4-a388-fe582b83b5fb&api_key=d4a9df15-498d-40fb-9011-c64ae35b47c3&transport=websocket&EIO=4
+2025-02-01 02:21:45,971 - INFO - WebSocket upgrade was successful
+2025-02-01 02:21:45,972 - INFO - Received packet NOOP data 
+2025-02-01 02:21:45,974 - INFO - Received packet MESSAGE data 0{"sid":"eJY-47-F3sPAquuNAAAB"}
+2025-02-01 02:21:45,975 - INFO - Namespace / is connected
+2025-02-01 02:21:45,975 - INFO - Baðlantý baþarýlý! Client ID: a0516c0b-3d7b-44d4-a388-fe582b83b5fb
+2025-02-01 02:21:45,975 - INFO - Sunucuya baðlantý baþarýlý!
+2025-02-01 02:21:45,975 - INFO - Ýstemci çalýþýyor ve komut bekliyor...
+2025-02-01 02:22:10,954 - INFO - Received packet PING data 
+2025-02-01 02:22:10,955 - INFO - Sending packet PONG data 
+2025-02-01 02:22:35,956 - INFO - Received packet PING data 
+2025-02-01 02:22:35,956 - INFO - Sending packet PONG data 
+2025-02-01 02:23:00,958 - INFO - Received packet PING data 
+2025-02-01 02:23:00,958 - INFO - Sending packet PONG data 
+2025-02-01 02:23:25,960 - INFO - Received packet PING data 
+2025-02-01 02:23:25,960 - INFO - Sending packet PONG data 
+2025-02-01 02:23:50,962 - INFO - Received packet PING data 
+2025-02-01 02:23:50,963 - INFO - Sending packet PONG data 
+2025-02-01 02:24:15,964 - INFO - Received packet PING data 
+2025-02-01 02:24:15,964 - INFO - Sending packet PONG data 
+2025-02-01 02:24:40,966 - INFO - Received packet PING data 
+2025-02-01 02:24:40,967 - INFO - Sending packet PONG data 
+2025-02-01 02:25:05,967 - INFO - Received packet PING data 
+2025-02-01 02:25:05,968 - INFO - Sending packet PONG data 
+2025-02-01 02:25:30,970 - INFO - Received packet PING data 
+2025-02-01 02:25:30,970 - INFO - Sending packet PONG data 
+2025-02-01 02:25:55,972 - INFO - Received packet PING data 
+2025-02-01 02:25:55,972 - INFO - Sending packet PONG data 
+2025-02-01 02:26:20,974 - INFO - Received packet PING data 
+2025-02-01 02:26:20,974 - INFO - Sending packet PONG data 
+2025-02-01 02:26:45,976 - INFO - Received packet PING data 
+2025-02-01 02:26:45,976 - INFO - Sending packet PONG data 
+2025-02-01 02:27:10,977 - INFO - Received packet PING data 
+2025-02-01 02:27:10,977 - INFO - Sending packet PONG data 
+2025-02-01 02:27:35,980 - INFO - Received packet PING data 
+2025-02-01 02:27:35,980 - INFO - Sending packet PONG data 
+2025-02-01 02:28:00,981 - INFO - Received packet PING data 
+2025-02-01 02:28:00,981 - INFO - Sending packet PONG data 
+2025-02-01 02:28:25,983 - INFO - Received packet PING data 
+2025-02-01 02:28:25,983 - INFO - Sending packet PONG data 
+2025-02-01 02:28:50,984 - INFO - Received packet PING data 
+2025-02-01 02:28:50,984 - INFO - Sending packet PONG data 
+2025-02-01 02:42:20,292 - INFO - Sunucuya baðlanýlýyor... Deneme 1/5
+2025-02-01 02:42:20,294 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?client_id=15612c65-4ad3-4516-9591-6ca877cf47ee&api_key= def create_user(self, username, password):&transport=polling&EIO=4
+2025-02-01 02:42:20,296 - INFO - HTTP GET request to http://127.0.0.1:5000/socket.io/?client_id=15612c65-4ad3-4516-9591-6ca877cf47ee&api_key= def create_user(self, username, password):&transport=polling&EIO=4&t=1738366940.2946124 failed with error Invalid leading whitespace, reserved character(s), or return character(s) in header value: ' def create_user(self, username, password):'.
+2025-02-01 02:42:20,296 - ERROR - Baðlantý hatasý: Invalid leading whitespace, reserved character(s), or return character(s) in header value: ' def create_user(self, username, password):'
+2025-02-01 02:42:20,297 - INFO - 5 saniye sonra tekrar denenecek...
+2025-02-01 02:42:25,298 - INFO - Sunucuya baðlanýlýyor... Deneme 2/5
+2025-02-01 02:42:25,298 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?client_id=15612c65-4ad3-4516-9591-6ca877cf47ee&api_key= def create_user(self, username, password):&transport=polling&EIO=4
+2025-02-01 02:42:25,299 - INFO - HTTP GET request to http://127.0.0.1:5000/socket.io/?client_id=15612c65-4ad3-4516-9591-6ca877cf47ee&api_key= def create_user(self, username, password):&transport=polling&EIO=4&t=1738366945.2981286 failed with error Invalid leading whitespace, reserved character(s), or return character(s) in header value: ' def create_user(self, username, password):'.
+2025-02-01 02:42:25,299 - ERROR - Baðlantý hatasý: Invalid leading whitespace, reserved character(s), or return character(s) in header value: ' def create_user(self, username, password):'
+2025-02-01 02:42:25,299 - INFO - 5 saniye sonra tekrar denenecek...
+2025-02-01 02:42:30,300 - INFO - Sunucuya baðlanýlýyor... Deneme 3/5
+2025-02-01 02:42:30,300 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?client_id=15612c65-4ad3-4516-9591-6ca877cf47ee&api_key= def create_user(self, username, password):&transport=polling&EIO=4
+2025-02-01 02:42:30,301 - INFO - HTTP GET request to http://127.0.0.1:5000/socket.io/?client_id=15612c65-4ad3-4516-9591-6ca877cf47ee&api_key= def create_user(self, username, password):&transport=polling&EIO=4&t=1738366950.300139 failed with error Invalid leading whitespace, reserved character(s), or return character(s) in header value: ' def create_user(self, username, password):'.
+2025-02-01 02:42:30,301 - ERROR - Baðlantý hatasý: Invalid leading whitespace, reserved character(s), or return character(s) in header value: ' def create_user(self, username, password):'
+2025-02-01 02:42:30,301 - INFO - 5 saniye sonra tekrar denenecek...
+2025-02-01 02:42:35,302 - INFO - Sunucuya baðlanýlýyor... Deneme 4/5
+2025-02-01 02:42:35,302 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?client_id=15612c65-4ad3-4516-9591-6ca877cf47ee&api_key= def create_user(self, username, password):&transport=polling&EIO=4
+2025-02-01 02:42:35,302 - INFO - HTTP GET request to http://127.0.0.1:5000/socket.io/?client_id=15612c65-4ad3-4516-9591-6ca877cf47ee&api_key= def create_user(self, username, password):&transport=polling&EIO=4&t=1738366955.30269 failed with error Invalid leading whitespace, reserved character(s), or return character(s) in header value: ' def create_user(self, username, password):'.
+2025-02-01 02:42:35,302 - ERROR - Baðlantý hatasý: Invalid leading whitespace, reserved character(s), or return character(s) in header value: ' def create_user(self, username, password):'
+2025-02-01 02:42:35,303 - INFO - 5 saniye sonra tekrar denenecek...
+2025-02-01 02:42:40,304 - INFO - Sunucuya baðlanýlýyor... Deneme 5/5
+2025-02-01 02:42:40,304 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?client_id=15612c65-4ad3-4516-9591-6ca877cf47ee&api_key= def create_user(self, username, password):&transport=polling&EIO=4
+2025-02-01 02:42:40,305 - INFO - HTTP GET request to http://127.0.0.1:5000/socket.io/?client_id=15612c65-4ad3-4516-9591-6ca877cf47ee&api_key= def create_user(self, username, password):&transport=polling&EIO=4&t=1738366960.3042078 failed with error Invalid leading whitespace, reserved character(s), or return character(s) in header value: ' def create_user(self, username, password):'.
+2025-02-01 02:42:40,305 - ERROR - Baðlantý hatasý: Invalid leading whitespace, reserved character(s), or return character(s) in header value: ' def create_user(self, username, password):'
+2025-02-01 02:42:40,305 - ERROR - Maksimum baðlantý deneme sayýsýna ulaþýldý!
+2025-02-01 02:42:40,305 - ERROR - Sunucuya baðlanýlamadý, program sonlandýrýlýyor.
+2025-02-01 02:49:46,761 - INFO - Sunucuya baðlanýlýyor... Deneme 1/5
+2025-02-01 02:49:46,762 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?client_id=fc7f1870-59b7-40d3-b2b9-16e097913434&api_key=5799d88e-ecbe-49ab-89c1-9226a8831b35&transport=polling&EIO=4
+2025-02-01 02:49:46,768 - INFO - Polling connection accepted with {'sid': 'Q272Sv0Ev8hNYQucAAAA', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000, 'maxPayload': 1000000}
+2025-02-01 02:49:46,769 - INFO - Engine.IO connection established
+2025-02-01 02:49:46,769 - INFO - Sending packet MESSAGE data 0{}
+2025-02-01 02:49:46,769 - INFO - Attempting WebSocket upgrade to ws://127.0.0.1:5000/socket.io/?client_id=fc7f1870-59b7-40d3-b2b9-16e097913434&api_key=5799d88e-ecbe-49ab-89c1-9226a8831b35&transport=websocket&EIO=4
+2025-02-01 02:49:46,775 - INFO - WebSocket upgrade was successful
+2025-02-01 02:49:46,777 - INFO - Received packet NOOP data 
+2025-02-01 02:49:46,780 - INFO - Received packet MESSAGE data 0{"sid":"4e-pHE1faXofKYWWAAAB"}
+2025-02-01 02:49:46,780 - INFO - Namespace / is connected
+2025-02-01 02:49:46,781 - INFO - Baðlantý baþarýlý! Client ID: fc7f1870-59b7-40d3-b2b9-16e097913434
+2025-02-01 02:49:46,783 - INFO - Sunucuya baðlantý baþarýlý!
+2025-02-01 02:49:46,783 - INFO - Ýstemci çalýþýyor ve komut bekliyor...
+2025-02-01 02:50:11,768 - INFO - Received packet PING data 
+2025-02-01 02:50:11,769 - INFO - Sending packet PONG data 
+2025-02-01 02:50:36,770 - INFO - Received packet PING data 
+2025-02-01 02:50:36,771 - INFO - Sending packet PONG data 
+2025-02-01 02:50:55,489 - INFO - Unexpected error receiving packet: "[WinError 10054] Varolan bir baðlantý uzaktaki bir ana bilgisayar tarafýndan zorla kapatýldý", aborting
+2025-02-01 02:50:55,499 - INFO - Waiting for write loop task to end
+2025-02-01 02:50:55,501 - INFO - Exiting write loop task
+2025-02-01 02:50:55,507 - INFO - Engine.IO connection dropped
+2025-02-01 02:50:55,510 - WARNING - Sunucu baðlantýsý kesildi!
+2025-02-01 02:50:55,511 - INFO - Connection failed, new attempt in 1.44 seconds
+2025-02-01 02:50:55,511 - INFO - Exiting read loop task
+2025-02-01 02:50:56,951 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?client_id=fc7f1870-59b7-40d3-b2b9-16e097913434&api_key=5799d88e-ecbe-49ab-89c1-9226a8831b35&transport=polling&EIO=4
+2025-02-01 02:50:58,999 - INFO - HTTP GET request to http://127.0.0.1:5000/socket.io/?client_id=fc7f1870-59b7-40d3-b2b9-16e097913434&api_key=5799d88e-ecbe-49ab-89c1-9226a8831b35&transport=polling&EIO=4&t=1738367456.95194 failed with error HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /socket.io/?client_id=fc7f1870-59b7-40d3-b2b9-16e097913434&api_key=5799d88e-ecbe-49ab-89c1-9226a8831b35&transport=polling&EIO=4&t=1738367456.95194 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000154969297D0>: Failed to establish a new connection: [WinError 10061] Hedef makine etkin olarak reddettiðinden baðlantý kurulamadý')).
+2025-02-01 02:50:59,001 - INFO - Connection failed, new attempt in 1.67 seconds
+2025-02-01 02:51:00,677 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?client_id=fc7f1870-59b7-40d3-b2b9-16e097913434&api_key=5799d88e-ecbe-49ab-89c1-9226a8831b35&transport=polling&EIO=4
+2025-02-01 02:51:00,682 - INFO - Polling connection accepted with {'sid': 'F0ZWmV5NCfxp6SmTAAAA', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000, 'maxPayload': 1000000}
+2025-02-01 02:51:00,682 - INFO - Engine.IO connection established
+2025-02-01 02:51:00,682 - INFO - Sending packet MESSAGE data 0{}
+2025-02-01 02:51:00,683 - INFO - Attempting WebSocket upgrade to ws://127.0.0.1:5000/socket.io/?client_id=fc7f1870-59b7-40d3-b2b9-16e097913434&api_key=5799d88e-ecbe-49ab-89c1-9226a8831b35&transport=websocket&EIO=4
+2025-02-01 02:51:00,690 - INFO - WebSocket upgrade was successful
+2025-02-01 02:51:00,693 - INFO - Received packet NOOP data 
+2025-02-01 02:51:00,697 - INFO - Received packet MESSAGE data 0{"sid":"2w9PWldMqMab-ZmzAAAB"}
+2025-02-01 02:51:00,699 - INFO - Namespace / is connected
+2025-02-01 02:51:00,700 - INFO - Baðlantý baþarýlý! Client ID: fc7f1870-59b7-40d3-b2b9-16e097913434
+2025-02-01 02:51:00,701 - INFO - Reconnection successful
+2025-02-01 02:51:25,681 - INFO - Received packet PING data 
+2025-02-01 02:51:25,681 - INFO - Sending packet PONG data 
+2025-02-01 02:51:50,683 - INFO - Received packet PING data 
+2025-02-01 02:51:50,683 - INFO - Sending packet PONG data 
+2025-02-01 02:52:02,350 - INFO - Unexpected error receiving packet: "[WinError 10054] Varolan bir baðlantý uzaktaki bir ana bilgisayar tarafýndan zorla kapatýldý", aborting
+2025-02-01 02:52:02,351 - INFO - Waiting for write loop task to end
+2025-02-01 02:52:02,351 - INFO - Exiting write loop task
+2025-02-01 02:52:02,351 - INFO - Engine.IO connection dropped
+2025-02-01 02:52:02,352 - WARNING - Sunucu baðlantýsý kesildi!
+2025-02-01 02:52:02,352 - INFO - Connection failed, new attempt in 1.36 seconds
+2025-02-01 02:52:02,352 - INFO - Exiting read loop task
+2025-02-01 02:52:03,723 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?client_id=fc7f1870-59b7-40d3-b2b9-16e097913434&api_key=5799d88e-ecbe-49ab-89c1-9226a8831b35&transport=polling&EIO=4
+2025-02-01 02:52:05,768 - INFO - HTTP GET request to http://127.0.0.1:5000/socket.io/?client_id=fc7f1870-59b7-40d3-b2b9-16e097913434&api_key=5799d88e-ecbe-49ab-89c1-9226a8831b35&transport=polling&EIO=4&t=1738367523.7236881 failed with error HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /socket.io/?client_id=fc7f1870-59b7-40d3-b2b9-16e097913434&api_key=5799d88e-ecbe-49ab-89c1-9226a8831b35&transport=polling&EIO=4&t=1738367523.7236881 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000015496938AD0>: Failed to establish a new connection: [WinError 10061] Hedef makine etkin olarak reddettiðinden baðlantý kurulamadý')).
+2025-02-01 02:52:05,769 - INFO - Connection failed, new attempt in 1.77 seconds
+2025-02-01 02:52:07,547 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?client_id=fc7f1870-59b7-40d3-b2b9-16e097913434&api_key=5799d88e-ecbe-49ab-89c1-9226a8831b35&transport=polling&EIO=4
+2025-02-01 02:52:09,590 - INFO - HTTP GET request to http://127.0.0.1:5000/socket.io/?client_id=fc7f1870-59b7-40d3-b2b9-16e097913434&api_key=5799d88e-ecbe-49ab-89c1-9226a8831b35&transport=polling&EIO=4&t=1738367527.5476868 failed with error HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /socket.io/?client_id=fc7f1870-59b7-40d3-b2b9-16e097913434&api_key=5799d88e-ecbe-49ab-89c1-9226a8831b35&transport=polling&EIO=4&t=1738367527.5476868 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001549692B010>: Failed to establish a new connection: [WinError 10061] Hedef makine etkin olarak reddettiðinden baðlantý kurulamadý')).
+2025-02-01 02:52:09,591 - INFO - Connection failed, new attempt in 4.38 seconds
+2025-02-01 02:52:13,986 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?client_id=fc7f1870-59b7-40d3-b2b9-16e097913434&api_key=5799d88e-ecbe-49ab-89c1-9226a8831b35&transport=polling&EIO=4
+2025-02-01 02:52:16,011 - INFO - HTTP GET request to http://127.0.0.1:5000/socket.io/?client_id=fc7f1870-59b7-40d3-b2b9-16e097913434&api_key=5799d88e-ecbe-49ab-89c1-9226a8831b35&transport=polling&EIO=4&t=1738367533.9862077 failed with error HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /socket.io/?client_id=fc7f1870-59b7-40d3-b2b9-16e097913434&api_key=5799d88e-ecbe-49ab-89c1-9226a8831b35&transport=polling&EIO=4&t=1738367533.9862077 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001549693AE50>: Failed to establish a new connection: [WinError 10061] Hedef makine etkin olarak reddettiðinden baðlantý kurulamadý')).
+2025-02-01 02:52:16,011 - INFO - Connection failed, new attempt in 4.73 seconds
+2025-02-01 02:52:20,751 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?client_id=fc7f1870-59b7-40d3-b2b9-16e097913434&api_key=5799d88e-ecbe-49ab-89c1-9226a8831b35&transport=polling&EIO=4
+2025-02-01 02:52:22,799 - INFO - HTTP GET request to http://127.0.0.1:5000/socket.io/?client_id=fc7f1870-59b7-40d3-b2b9-16e097913434&api_key=5799d88e-ecbe-49ab-89c1-9226a8831b35&transport=polling&EIO=4&t=1738367540.751069 failed with error HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /socket.io/?client_id=fc7f1870-59b7-40d3-b2b9-16e097913434&api_key=5799d88e-ecbe-49ab-89c1-9226a8831b35&transport=polling&EIO=4&t=1738367540.751069 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001549693BF90>: Failed to establish a new connection: [WinError 10061] Hedef makine etkin olarak reddettiðinden baðlantý kurulamadý')).
+2025-02-01 02:52:22,801 - INFO - Connection failed, new attempt in 4.57 seconds
+2025-02-01 02:52:27,378 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?client_id=fc7f1870-59b7-40d3-b2b9-16e097913434&api_key=5799d88e-ecbe-49ab-89c1-9226a8831b35&transport=polling&EIO=4
+2025-02-01 02:52:29,428 - INFO - HTTP GET request to http://127.0.0.1:5000/socket.io/?client_id=fc7f1870-59b7-40d3-b2b9-16e097913434&api_key=5799d88e-ecbe-49ab-89c1-9226a8831b35&transport=polling&EIO=4&t=1738367547.37807 failed with error HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /socket.io/?client_id=fc7f1870-59b7-40d3-b2b9-16e097913434&api_key=5799d88e-ecbe-49ab-89c1-9226a8831b35&transport=polling&EIO=4&t=1738367547.37807 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000015496941150>: Failed to establish a new connection: [WinError 10061] Hedef makine etkin olarak reddettiðinden baðlantý kurulamadý')).
+2025-02-01 02:52:29,428 - INFO - Connection failed, new attempt in 5.08 seconds
+2025-02-01 02:52:34,514 - INFO - Attempting polling connection to http://127.0.0.1:5000/socket.io/?client_id=fc7f1870-59b7-40d3-b2b9-16e097913434&api_key=5799d88e-ecbe-49ab-89c1-9226a8831b35&transport=polling&EIO=4
+2025-02-01 02:52:34,518 - INFO - Polling connection accepted with {'sid': 'jrRuRWupty8iaBrvAAAA', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000, 'maxPayload': 1000000}
+2025-02-01 02:52:34,518 - INFO - Engine.IO connection established
+2025-02-01 02:52:34,518 - INFO - Sending packet MESSAGE data 0{}
+2025-02-01 02:52:34,519 - INFO - Attempting WebSocket upgrade to ws://127.0.0.1:5000/socket.io/?client_id=fc7f1870-59b7-40d3-b2b9-16e097913434&api_key=5799d88e-ecbe-49ab-89c1-9226a8831b35&transport=websocket&EIO=4
+2025-02-01 02:52:34,523 - INFO - WebSocket upgrade was successful
+2025-02-01 02:52:34,524 - INFO - Received packet NOOP data 
+2025-02-01 02:52:34,526 - INFO - Received packet MESSAGE data 0{"sid":"ctKeLuDbVdctaXqnAAAB"}
+2025-02-01 02:52:34,527 - INFO - Namespace / is connected
+2025-02-01 02:52:34,527 - INFO - Baðlantý baþarýlý! Client ID: fc7f1870-59b7-40d3-b2b9-16e097913434
+2025-02-01 02:52:34,528 - INFO - Reconnection successful
