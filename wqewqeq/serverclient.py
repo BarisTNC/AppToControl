@@ -1,9 +1,11 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, redirect, url_for
 from flask_socketio import SocketIO, emit
 from flask_cors import CORS
 import threading
 import logging
 import time
+import os
+import platform
 
 # Flask & SocketIO Initialization
 app = Flask(__name__)
@@ -25,43 +27,46 @@ client_lock = threading.Lock()
 # Allowed Commands
 VALID_COMMANDS = {"shutdown", "restart", "sleep"}
 
-# API Key Authentication
-def require_api_key(f):
-    def decorated_function(*args, **kwargs):
-        api_key = request.headers.get("X-API-KEY")
-        if api_key != API_KEY:
-            return jsonify({"status": "error", "message": "Unauthorized access!"}), 403
-        return f(*args, **kwargs)
-    return decorated_function
+# Utility Functions for System Commands
+def execute_system_command(command):
+    try:
+        if platform.system() == "Windows":
+            if command == "shutdown":
+                os.system("shutdown /s /t 1")
+            elif command == "restart":
+                os.system("shutdown /r /t 1")
+            elif command == "sleep":
+                os.system("rundll32.exe powrprof.dll,SetSuspendState Sleep")
+        else:
+            if command == "shutdown":
+                os.system("sudo shutdown now")
+            elif command == "restart":
+                os.system("sudo reboot")
+            elif command == "sleep":
+                os.system("systemctl suspend")
+        logger.info(f"Executed system command: {command}")
+        return jsonify({"status": "success", "message": f"Command '{command}' executed successfully."}), 200
+    except Exception as e:
+        logger.error(f"Error executing system command '{command}': {e}")
+        return jsonify({"status": "error", "message": f"Error executing command: {e}"}), 500
+
+# Routes for System Commands
+@app.route("/<command>")
+def handle_command(command):
+    if command not in VALID_COMMANDS:
+        return jsonify({"status": "error", "message": "Invalid command"}), 400
+    return execute_system_command(command)
 
 @app.route("/")
 def index():
-    return jsonify({"message": "Server is running!"})
-
-@app.route("/send-command", methods=["POST"])
-@require_api_key
-def send_command():
-    data = request.json
-    client_id = data.get("client_id")
-    command = data.get("command")
-
-    if not client_id or not command:
-        return jsonify({"status": "error", "message": "Missing client_id or command"}), 400
-
-    if command not in VALID_COMMANDS:
-        return jsonify({"status": "error", "message": "Invalid command"}), 400
-
-    with client_lock:
-        if client_id in connected_clients:
-            try:
-                logger.info(f"Sending command '{command}' to client {client_id}")
-                socketio.emit("execute_command", {"command": command}, room=client_id)
-                return jsonify({"status": "success", "message": f"Command sent: {command}"}), 200
-            except Exception as e:
-                logger.error(f"Error sending command: {e}")
-                return jsonify({"status": "error", "message": f"Server error: {e}"}), 500
-        else:
-            return jsonify({"status": "error", "message": "Client not found"}), 404
+    return '''
+<h1>System Command Control</h1>
+<ul>
+<li><a href="/shutdown">Shutdown</a></li>
+<li><a href="/restart">Restart</a></li>
+<li><a href="/sleep">Sleep</a></li>
+</ul>
+'''
 
 @socketio.on("connect")
 def handle_connect():
@@ -79,23 +84,23 @@ def handle_disconnect():
             del connected_clients[client_id]
             logger.info(f"Client disconnected: {client_id}")
 
-# **🔹 Terminalden Komut Girişi (Manuel Kontrol)**
+# Command Input for Manual Testing
 def command_input_loop():
     while True:
-        time.sleep(1)  # CPU kullanımını düşürmek için kısa bir bekleme süresi
+        time.sleep(1)  # Reduce CPU usage
         with client_lock:
             if not connected_clients:
-                print("⚠️ Bağlı istemci yok. Bekleniyor...")
+                print("⚠️ No connected clients. Waiting...")
                 continue
 
-        print("\n🔹 Bağlı istemciler:")
+        print("\n🔹 Connected Clients:")
         for i, (client_id, ip) in enumerate(connected_clients.items(), 1):
             print(f"{i}. {client_id} - {ip}")
 
         try:
-            choice = input("\nİstemci numarası seçin (veya 'q' ile çıkın): ").strip()
+            choice = input("\nSelect client number ('q' to quit): ").strip()
             if choice.lower() == 'q':
-                print("Çıkış yapılıyor...")
+                print("Exiting...")
                 break
 
             choice = int(choice) - 1
@@ -104,21 +109,21 @@ def command_input_loop():
             if 0 <= choice < len(client_ids):
                 selected_client = client_ids[choice]
             else:
-                print("⚠️ Geçersiz seçim! Tekrar deneyin.")
+                print("⚠️ Invalid selection! Try again.")
                 continue
 
-            command = input(f"\nKomut girin ({', '.join(VALID_COMMANDS)}): ").strip()
+            command = input(f"\nEnter command ({', '.join(VALID_COMMANDS)}): ").strip()
             if command not in VALID_COMMANDS:
-                print("⚠️ Geçersiz komut! Tekrar deneyin.")
+                print("⚠️ Invalid command! Try again.")
                 continue
 
-            print(f"📤 Komut gönderiliyor: {command} -> {selected_client}")
+            print(f"📤 Sending command: {command} -> {selected_client}")
             socketio.emit("execute_command", {"command": command}, room=selected_client)
 
         except ValueError:
-            print("⚠️ Geçersiz giriş! Sayı girin veya 'q' ile çıkın.")
+            print("⚠️ Invalid input! Enter a number or 'q' to quit.")
 
-# **Komut Girişi için Ayrı Bir Thread Başlat**
+# Start Command Input Thread
 threading.Thread(target=command_input_loop, daemon=True).start()
 
 if __name__ == "__main__":
