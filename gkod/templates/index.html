@@ -3,386 +3,342 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Remote Control Panel</title>
+    <title>Uzaktan Yönetim Sistemi</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .toast {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            color: white;
+            z-index: 1000;
+            animation: slideIn 0.5s ease-out;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+
+        .success { background-color: #10B981; }
+        .error { background-color: #EF4444; }
+        .warning { background-color: #F59E0B; }
+    </style>
 </head>
-<body class="bg-gray-100">
-    <div id="auth-container" class="container mx-auto px-4 py-8">
-        <!-- Login/Register Forms -->
-        <div class="max-w-md mx-auto bg-white rounded-lg shadow-lg p-6 mb-8">
-            <div class="flex justify-center mb-6">
-                <button id="loginTab" class="px-4 py-2 text-blue-600 border-b-2 border-blue-600">Giriş</button>
-                <button id="registerTab" class="px-4 py-2 text-gray-500">Kayıt</button>
+<body class="bg-gray-100 min-h-screen">
+    <!-- Login/Register Form -->
+    <div id="authContainer" class="container mx-auto px-4 pt-10">
+        <div class="max-w-md mx-auto bg-white rounded-lg shadow-lg p-6">
+            <h2 class="text-2xl font-bold mb-6 text-center">Uzaktan Yönetim Sistemi</h2>
+            <div class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Kullanıcı Adı</label>
+                    <input type="text" id="username" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Şifre</label>
+                    <input type="password" id="password" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                </div>
+                <div class="flex space-x-4">
+                    <button onclick="login()" class="flex-1 bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700">
+                        Giriş Yap
+                    </button>
+                    <button onclick="register()" class="flex-1 bg-gray-600 text-white py-2 px-4 rounded-md hover:bg-gray-700">
+                        Kayıt Ol
+                    </button>
+                </div>
             </div>
-
-            <form id="loginForm" class="space-y-4">
-                <div>
-                    <label class="block text-gray-700">Kullanıcı Adı</label>
-                    <input type="text" id="loginUsername" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500">
-                </div>
-                <div>
-                    <label class="block text-gray-700">Şifre</label>
-                    <input type="password" id="loginPassword" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500">
-                </div>
-                <button type="submit" class="w-full py-2 px-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
-                    Giriş Yap
-                </button>
-            </form>
-
-            <form id="registerForm" class="hidden space-y-4">
-                <div>
-                    <label class="block text-gray-700">Kullanıcı Adı</label>
-                    <input type="text" id="registerUsername" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500">
-                </div>
-                <div>
-                    <label class="block text-gray-700">Şifre</label>
-                    <input type="password" id="registerPassword" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500">
-                </div>
-                <button type="submit" class="w-full py-2 px-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
-                    Kayıt Ol
-                </button>
-            </form>
         </div>
     </div>
 
-    <div id="control-panel" class="hidden container mx-auto px-4 py-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- İstemci Listesi -->
-            <div class="bg-white rounded-lg shadow-lg p-6">
-                <h2 class="text-xl font-bold mb-4">Bağlı İstemciler</h2>
-                <div id="clientList" class="space-y-2">
-                    <!-- İstemciler buraya dinamik olarak eklenecek -->
-                </div>
-            </div>
-
-            <!-- Komut Paneli -->
-            <div class="bg-white rounded-lg shadow-lg p-6">
-                <h2 class="text-xl font-bold mb-4">Komut Paneli</h2>
-                <div class="space-y-4">
-                    <div>
-                        <label class="block text-gray-700">Seçili İstemci</label>
-                        <select id="clientSelect" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500">
-                            <option value="">İstemci Seçin</option>
-                        </select>
+    <!-- Main Content -->
+    <div id="mainContent" class="hidden">
+        <nav class="bg-white shadow-lg">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="flex justify-between h-16">
+                    <div class="flex items-center">
+                        <span class="text-xl font-bold">Uzaktan Yönetim Paneli</span>
                     </div>
-
-                    <div class="grid grid-cols-2 gap-4">
-                        <button onclick="sendCommand('shutdown')" class="py-2 px-4 bg-red-600 text-white rounded-lg hover:bg-red-700">
-                            <i class="fas fa-power-off mr-2"></i>Kapat
-                        </button>
-                        <button onclick="sendCommand('restart')" class="py-2 px-4 bg-yellow-600 text-white rounded-lg hover:bg-yellow-700">
-                            <i class="fas fa-redo mr-2"></i>Yeniden Başlat
-                        </button>
-                        <button onclick="sendCommand('sleep')" class="py-2 px-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
-                            <i class="fas fa-moon mr-2"></i>Uyku
-                        </button>
-                        <button onclick="sendCommand('screenshot')" class="py-2 px-4 bg-green-600 text-white rounded-lg hover:bg-green-700">
-                            <i class="fas fa-camera mr-2"></i>Ekran Görüntüsü
-                        </button>
-                        <button onclick="sendCommand('processes')" class="py-2 px-4 bg-purple-600 text-white rounded-lg hover:bg-purple-700">
-                            <i class="fas fa-list mr-2"></i>Süreçler
-                        </button>
-                        <button onclick="showTerminal()" class="py-2 px-4 bg-gray-600 text-white rounded-lg hover:bg-gray-700">
-                            <i class="fas fa-terminal mr-2"></i>Terminal
+                    <div class="flex items-center space-x-4">
+                        <span id="apiKeyDisplay" class="text-sm text-gray-600"></span>
+                        <button onclick="logout()" class="bg-red-600 text-white py-2 px-4 rounded-md hover:bg-red-700">
+                            Çıkış Yap
                         </button>
                     </div>
                 </div>
             </div>
-        </div>
+        </nav>
 
-        <!-- Terminal Modal -->
-        <div id="terminalModal" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center">
-            <div class="bg-white rounded-lg shadow-lg p-6 w-full max-w-2xl">
-                <div class="flex justify-between items-center mb-4">
-                    <h3 class="text-xl font-bold">Terminal</h3>
-                    <button onclick="hideTerminal()" class="text-gray-500 hover:text-gray-700">
-                        <i class="fas fa-times"></i>
-                    </button>
+        <div class="max-w-7xl mx-auto px-4 py-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Clients Panel -->
+                <div class="col-span-1 bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-lg font-semibold mb-4">Bağlı İstemciler</h3>
+                    <div id="clientsList" class="space-y-2"></div>
                 </div>
-                <div id="terminalOutput" class="bg-black text-green-500 p-4 rounded-lg h-64 overflow-y-auto font-mono">
-                    <!-- Terminal çıktısı buraya gelecek -->
-                </div>
-                <div class="mt-4">
-                    <input type="text" id="terminalInput" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
-                           placeholder="Komut girin...">
+
+                <!-- Command Panel -->
+                <div class="col-span-2 bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-lg font-semibold mb-4">Komut Paneli</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Seçili İstemci</label>
+                            <span id="selectedClient" class="block mt-1 text-gray-600">Seçili istemci yok</span>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Komut</label>
+                            <select id="commandSelect" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                                <option value="">Komut Seçin</option>
+                                <option value="shutdown">Bilgisayarı Kapat</option>
+                                <option value="restart">Yeniden Başlat</option>
+                                <option value="sleep">Uyku Moduna Al</option>
+                                <option value="lock">Kilitle</option>
+                                <option value="logout">Oturumu Kapat</option>
+                                <option value="screenshot">Ekran Görüntüsü Al</option>
+                                <option value="processes">Süreçleri Listele</option>
+                                <option value="sysinfo">Sistem Bilgisi</option>
+                                <option value="battery">Pil Durumu</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Parametreler (JSON)</label>
+                            <textarea id="commandParams" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" rows="3" placeholder='{"param": "value"}'></textarea>
+                        </div>
+                        <button onclick="sendCommand()" class="bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700">
+                            Komutu Gönder
+                        </button>
+                    </div>
+
+                    <!-- Result Panel -->
+                    <div class="mt-6">
+                        <h4 class="text-lg font-semibold mb-2">Komut Sonucu</h4>
+                        <pre id="commandResult" class="bg-gray-100 p-4 rounded-md overflow-x-auto">
+                            Henüz komut çalıştırılmadı
+                        </pre>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
     <script>
-        const API_URL = "http://127.0.0.1:5000";
-        let currentApiKey = '';
+        let API_KEY = localStorage.getItem('api_key');
+        let socket = null;
+        let selectedClientId = null;
 
-        // Sayfa yükleme
-        document.addEventListener('DOMContentLoaded', () => {
-            const token = localStorage.getItem('token');
-            if (token) {
-                currentApiKey = localStorage.getItem('apiKey');
-                showControlPanel();
-                updateClientList();
+        // Sayfa yüklendiğinde kontrol et
+        window.onload = () => {
+            if (API_KEY) {
+                document.getElementById('apiKeyDisplay').textContent = `API Key: ${API_KEY}`;
+                initializeApp();
+            } else {
+                document.getElementById('authContainer').classList.remove('hidden');
             }
-        });
+        };
 
-        // Tab değiştirme
-        document.getElementById('loginTab').addEventListener('click', () => {
-            document.getElementById('loginForm').classList.remove('hidden');
-            document.getElementById('registerForm').classList.add('hidden');
-            document.getElementById('loginTab').classList.add('text-blue-600', 'border-b-2', 'border-blue-600');
-            document.getElementById('registerTab').classList.remove('text-blue-600', 'border-b-2', 'border-blue-600');
-        });
+        function showToast(message, type = 'success') {
+            const toast = document.createElement('div');
+            toast.className = `toast ${type}`;
+            toast.textContent = message;
+            document.body.appendChild(toast);
+            setTimeout(() => toast.remove(), 3000);
+        }
 
-        document.getElementById('registerTab').addEventListener('click', () => {
-            document.getElementById('registerForm').classList.remove('hidden');
-            document.getElementById('loginForm').classList.add('hidden');
-            document.getElementById('registerTab').classList.add('text-blue-600', 'border-b-2', 'border-blue-600');
-            document.getElementById('loginTab').classList.remove('text-blue-600', 'border-b-2', 'border-blue-600');
-        });
-
-        // Login form
-        document.getElementById('loginForm').addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const username = document.getElementById('loginUsername').value;
-            const password = document.getElementById('loginPassword').value;
+        async function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
 
             try {
-                const response = await fetch(`${API_URL}/login`, {
+                const response = await fetch('/login', {
                     method: 'POST',
                     headers: {
-                        'Content-Type': 'application/json',
+                        'Content-Type': 'application/json'
                     },
                     body: JSON.stringify({ username, password })
                 });
 
                 const data = await response.json();
                 if (data.status === 'success') {
-                    localStorage.setItem('token', data.token);
-                    localStorage.setItem('apiKey', data.api_key);
-                    currentApiKey = data.api_key;
-                    showControlPanel();
-                    updateClientList();
+                    API_KEY = data.api_key;
+                    localStorage.setItem('api_key', API_KEY);
+                    document.getElementById('apiKeyDisplay').textContent = `API Key: ${API_KEY}`;
+                    showToast('Giriş başarılı!', 'success');
+                    initializeApp();
                 } else {
-                    alert(data.message);
+                    showToast(data.message, 'error');
                 }
             } catch (error) {
-                alert('Giriş yapılırken hata oluştu');
+                showToast('Giriş yapılırken hata oluştu', 'error');
             }
-        });
+        }
 
-        // Register form
-        document.getElementById('registerForm').addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const username = document.getElementById('registerUsername').value;
-            const password = document.getElementById('registerPassword').value;
+        async function register() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
 
             try {
-                const response = await fetch(`${API_URL}/register`, {
+                const response = await fetch('/register', {
                     method: 'POST',
                     headers: {
-                        'Content-Type': 'application/json',
+                        'Content-Type': 'application/json'
                     },
                     body: JSON.stringify({ username, password })
                 });
 
                 const data = await response.json();
                 if (data.status === 'success') {
-                    alert(`Kayıt başarılı! API Key: ${data.api_key}`);
-                    document.getElementById('loginTab').click();
+                    showToast('Kayıt başarılı, giriş yapabilirsiniz', 'success');
                 } else {
-                    alert(data.message);
+                    showToast(data.message, 'error');
                 }
             } catch (error) {
-                alert('Kayıt olurken hata oluştu');
+                showToast('Kayıt olunurken hata oluştu', 'error');
             }
-        });
+        }
 
-        // İstemci listesini güncelle
-        async function updateClientList() {
+        function initializeApp() {
+            document.getElementById('authContainer').classList.add('hidden');
+            document.getElementById('mainContent').classList.remove('hidden');
+            fetchClients();
+
+            // Socket.IO bağlantısı
+            socket = io(window.location.origin, {
+                query: { api_key: API_KEY }
+            });
+
+            socket.on('connect', () => {
+                showToast('Sunucu bağlantısı kuruldu', 'success');
+            });
+
+            socket.on('disconnect', () => {
+                showToast('Sunucu bağlantısı kesildi', 'warning');
+            });
+
+            socket.on('command_result', (data) => {
+                const resultElement = document.getElementById('commandResult');
+                resultElement.textContent = JSON.stringify(data, null, 2);
+
+                if (data.success) {
+                    showToast('Komut başarıyla çalıştırıldı', 'success');
+                } else {
+                    showToast('Komut çalıştırılırken hata oluştu', 'error');
+                }
+            });
+
+            // Her 30 saniyede bir istemcileri güncelle
+            setInterval(fetchClients, 30000);
+        }
+
+        async function fetchClients() {
             try {
-                const response = await fetch(`${API_URL}/clients`, {
+                const response = await fetch('/clients', {
                     headers: {
-                        'X-API-KEY': currentApiKey
+                        'X-API-KEY': API_KEY
                     }
                 });
 
                 const data = await response.json();
                 if (data.status === 'success') {
-                    const clientList = document.getElementById('clientList');
-                    const clientSelect = document.getElementById('clientSelect');
-
-                    clientList.innerHTML = '';
-                    clientSelect.innerHTML = '<option value="">İstemci Seçin</option>';
-
-                    data.clients.forEach(client => {
-                        // Liste için
-                        const clientDiv = document.createElement('div');
-                        clientDiv.className = 'p-4 border rounded-lg hover:bg-gray-50';
-                        clientDiv.innerHTML = `
-                            <div class="flex items-center justify-between">
-                                <div>
-                                    <i class="fas fa-desktop mr-2"></i>
-                                    ${client}
-                                </div>
-                                <div class="text-green-500">
-                                    <i class="fas fa-circle"></i>
-                                </div>
-                            </div>
-                        `;
-                        clientList.appendChild(clientDiv);
-
-                        // Select için
-                        const option = document.createElement('option');
-                        option.value = client;
-                        option.textContent = client;
-                        clientSelect.appendChild(option);
-                    });
+                    updateClientsList(data.clients);
                 }
             } catch (error) {
-                console.error('İstemci listesi güncellenirken hata:', error);
+                showToast('İstemciler alınırken hata oluştu', 'error');
             }
         }
 
-        // Komut gönderme
-        async function sendCommand(command, params = {}) {
-            const clientId = document.getElementById('clientSelect').value;
-            if (!clientId) {
-                alert('Lütfen bir istemci seçin');
+        function updateClientsList(clients) {
+            const clientsList = document.getElementById('clientsList');
+            clientsList.innerHTML = '';
+
+            clients.forEach(client => {
+                const clientElement = document.createElement('div');
+                clientElement.className = 'p-3 bg-gray-50 rounded-md cursor-pointer hover:bg-gray-100';
+                clientElement.onclick = () => selectClient(client.client_id);
+
+                const status = client.status === 'active' ?
+                    '<span class="text-green-600">●</span>' :
+                    '<span class="text-gray-400">●</span>';
+
+                clientElement.innerHTML = `
+                    ${status} ${client.client_id}
+                    <div class="text-sm text-gray-600">
+                        Son görülme: ${new Date(client.last_seen).toLocaleString()}
+                    </div>
+                `;
+                clientsList.appendChild(clientElement);
+            });
+        }
+
+        function selectClient(clientId) {
+            selectedClientId = clientId;
+            document.getElementById('selectedClient').textContent = clientId;
+            showToast('İstemci seçildi', 'success');
+        }
+
+        async function sendCommand() {
+            if (!selectedClientId) {
+                showToast('Lütfen bir istemci seçin', 'warning');
                 return;
             }
 
+            const command = document.getElementById('commandSelect').value;
+            if (!command) {
+                showToast('Lütfen bir komut seçin', 'warning');
+                return;
+            }
+
+            let parameters = {};
+            const paramsText = document.getElementById('commandParams').value;
+            if (paramsText) {
+                try {
+                    parameters = JSON.parse(paramsText);
+                } catch (e) {
+                    showToast('Geçersiz parametre formatı', 'error');
+                    return;
+                }
+            }
+
             try {
-                const response = await fetch(`${API_URL}/send-command`, {
+                const response = await fetch('/send-command', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
-                        'X-API-KEY': currentApiKey
+                        'X-API-KEY': API_KEY
                     },
                     body: JSON.stringify({
-                        client_id: clientId,
+                        client_id: selectedClientId,
                         command: command,
-                        params: params
+                        parameters: parameters
                     })
                 });
 
                 const data = await response.json();
                 if (data.status === 'success') {
-                    if (command === 'processes') {
-                        showProcessList(data.result);
-                    } else if (command === 'screenshot') {
-                        showScreenshot(data.result);
-                    }
+                    showToast('Komut gönderildi', 'success');
                 } else {
-                    alert(data.message);
+                    showToast(data.message, 'error');
                 }
             } catch (error) {
-                alert('Komut gönderilirken hata oluştu');
+                showToast('Komut gönderilirken hata oluştu', 'error');
             }
         }
 
-        // Terminal işlevleri
-        function showTerminal() {
-            document.getElementById('terminalModal').classList.remove('hidden');
-            document.getElementById('terminalInput').focus();
-        }
-
-        function hideTerminal() {
-            document.getElementById('terminalModal').classList.add('hidden');
-        }
-
-        // Terminal input işleme
-        document.getElementById('terminalInput').addEventListener('keypress', async (e) => {
-            if (e.key === 'Enter') {
-                const command = e.target.value;
-                const terminalOutput = document.getElementById('terminalOutput');
-
-                terminalOutput.innerHTML += `<div class="mb-2">> ${command}</div>`;
-                e.target.value = '';
-
-                await sendCommand('exec', { command_str: command });
-            }
-        });
-
-        // Panel görünürlük kontrolü
-        function showControlPanel() {
-            document.getElementById('auth-container').classList.add('hidden');
-            document.getElementById('control-panel').classList.remove('hidden');
-        }
-
-        // İstemci listesi otomatik güncelleme
-        setInterval(updateClientList, 5000);
-
-        // Çıkış yapma
         function logout() {
-            localStorage.removeItem('token');
-            localStorage.removeItem('apiKey');
-            currentApiKey = '';
-            document.getElementById('auth-container').classList.remove('hidden');
-            document.getElementById('control-panel').classList.add('hidden');
-        }
-
-        // Process listesi gösterme
-        function showProcessList(processes) {
-            const modal = document.createElement('div');
-            modal.className = 'fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center';
-            modal.innerHTML = `
-                <div class="bg-white rounded-lg shadow-lg p-6 w-full max-w-4xl">
-                    <div class="flex justify-between items-center mb-4">
-                        <h3 class="text-xl font-bold">Çalışan Süreçler</h3>
-                        <button onclick="this.closest('.fixed').remove()" class="text-gray-500 hover:text-gray-700">
-                            <i class="fas fa-times"></i>
-                        </button>
-                    </div>
-                    <div class="overflow-x-auto">
-                        <table class="min-w-full">
-                            <thead>
-                                <tr>
-                                    <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">PID</th>
-                                    <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">İsim</th>
-                                    <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">CPU %</th>
-                                    <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Bellek %</th>
-                                    <th class="px-6 py-3 bg-gray-50"></th>
-                                </tr>
-                            </thead>
-                            <tbody class="bg-white divide-y divide-gray-200">
-                                ${processes.map(proc => `
-                                    <tr>
-                                        <td class="px-6 py-4 whitespace-nowrap">${proc.pid}</td>
-                                        <td class="px-6 py-4 whitespace-nowrap">${proc.name}</td>
-                                        <td class="px-6 py-4 whitespace-nowrap">${proc.cpu_percent.toFixed(1)}%</td>
-                                        <td class="px-6 py-4 whitespace-nowrap">${proc.memory_percent.toFixed(1)}%</td>
-                                        <td class="px-6 py-4 whitespace-nowrap text-right">
-                                            <button onclick="sendCommand('kill', {pid: ${proc.pid}})"
-                                                    class="text-red-600 hover:text-red-900">
-                                                <i class="fas fa-times"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                `).join('')}
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            `;
-            document.body.appendChild(modal);
-        }
-
-        // Screenshot görüntüleme
-        function showScreenshot(result) {
-            const modal = document.createElement('div');
-            modal.className = 'fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center';
-            modal.innerHTML = `
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <div class="flex justify-between items-center mb-4">
-                        <h3 class="text-xl font-bold">Ekran Görüntüsü</h3>
-                        <button onclick="this.closest('.fixed').remove()" class="text-gray-500 hover:text-gray-700">
-                            <i class="fas fa-times"></i>
-                        </button>
-                    </div>
-                    <img src="/screenshots/${result.filename}" class="max-w-full" />
-                </div>
-            `;
-            document.body.appendChild(modal);
+            localStorage.removeItem('api_key');
+            API_KEY = null;
+            if (socket) {
+                socket.disconnect();
+            }
+            selectedClientId = null;
+            document.getElementById('mainContent').classList.add('hidden');
+            document.getElementById('authContainer').classList.remove('hidden');
+            document.getElementById('username').value = '';
+            document.getElementById('password').value = '';
+            showToast('Çıkış yapıldı', 'success');
         }
     </script>
 </body>
